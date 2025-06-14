@@ -14,9 +14,13 @@ const Hero = () => {
             <span className="text-orange-700 font-semibold text-sm tracking-wide">THE COMPLETE ECOSYSTEM</span>
           </div>
           
-          <h1 className="text-6xl md:text-8xl font-bold mb-8 text-gray-900 tracking-tight">
+          <h1 className="text-6xl md:text-8xl font-bold mb-4 text-gray-900 tracking-tight">
             ResuHire
           </h1>
+          
+          <p className="text-2xl md:text-3xl font-light text-gray-600 mb-8 tracking-wide">
+            no Resume to get Hired
+          </p>
           
           <div className="max-w-4xl mx-auto mb-12">
             <p className="text-2xl md:text-3xl font-light text-gray-700 mb-6 leading-relaxed">
