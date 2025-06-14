@@ -9,6 +9,7 @@ import HowItWorks from '@/components/HowItWorks';
 import RecruiterSection from '@/components/RecruiterSection';
 import Testimonials from '@/components/Testimonials';
 import Enterprise from '@/components/Enterprise';
+import FAQ from '@/components/FAQ';
 import Pricing from '@/components/Pricing';
 import CTA from '@/components/CTA';
 import Navigation from '@/components/Navigation';
@@ -27,6 +28,7 @@ const Index = () => {
       <RecruiterSection />
       <Testimonials />
       <Enterprise />
+      <FAQ />
       <Pricing />
       <CTA />
       <Footer />
