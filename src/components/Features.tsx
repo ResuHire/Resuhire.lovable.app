@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Zap, Target, BookOpen, Users, Brain, Trophy, Rocket, Shield, TrendingUp, Award, Clock, Heart, Mic, Camera, Building2, Globe, GitBranch, Lightbulb } from 'lucide-react';
+import { Zap, Target, BookOpen, Users, Brain, Trophy, Rocket, Shield, TrendingUp, Award, Clock, Heart, Mic, Camera, Building2, Globe, GitBranch, Lightbulb, DollarSign, BarChart3, Briefcase } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 const Features = () => {
@@ -153,6 +152,27 @@ const Features = () => {
     }
   ];
 
+  const marketOpportunity = [
+    {
+      icon: DollarSign,
+      value: "$200B+",
+      label: "Global Recruitment Market",
+      description: "Total addressable market across hiring and training"
+    },
+    {
+      icon: BarChart3,
+      value: "$50B+",
+      label: "EdTech Market Share",
+      description: "Corporate training and skill development segment"
+    },
+    {
+      icon: Briefcase,
+      value: "$150B+",
+      label: "HrTech Market Share",
+      description: "Recruitment technology and talent acquisition"
+    }
+  ];
+
   return (
     <section id="features" className="py-20 relative overflow-hidden">
       {/* Background Elements */}
@@ -170,6 +190,26 @@ const Features = () => {
             The world's first platform that seamlessly integrates HRTech + EdTech + AI with FAANG access, 
             mental preparation, and holistic human development. No other platform offers this complete transformation.
           </p>
+
+          {/* Market Opportunity Section */}
+          <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-8 mb-12 border border-green-200">
+            <h3 className="text-2xl font-bold text-green-800 mb-6">$200B Market Opportunity</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              {marketOpportunity.map((market, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <market.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-3xl font-bold text-green-800 mb-2">{market.value}</div>
+                  <div className="font-semibold text-green-700 mb-2">{market.label}</div>
+                  <div className="text-sm text-green-600">{market.description}</div>
+                </div>
+              ))}
+            </div>
+            <p className="text-green-700 mt-6 font-medium">
+              ResuHire is positioned at the intersection of the fastest-growing segments in both markets
+            </p>
+          </div>
 
           {/* Unique Value Props */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
