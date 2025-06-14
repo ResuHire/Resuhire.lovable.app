@@ -17,23 +17,23 @@ const Hero = () => {
         <div className="text-center max-w-5xl mx-auto">
           <div className="flex justify-center mb-6">
             <Badge className="mb-6 bg-gradient-to-r from-purple-600 to-blue-600 text-white border-0 px-6 py-2 text-lg animate-fade-in">
-              🚀 World's First Job Seekers Accelerator
+              🚀 Next-Gen HrTech × EduTech Platform
             </Badge>
           </div>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-tight animate-fade-in">
             <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              From Student
+              The Future
             </span>
             <br />
-            <span className="text-foreground">to</span>
+            <span className="text-foreground">of</span>
             <br />
             <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-              Warrior
+              Hiring
             </span>
             <br />
             <span className="text-2xl md:text-4xl lg:text-5xl font-bold text-muted-foreground">
-              in 12 Weeks
+              is Here
             </span>
           </h1>
 
@@ -52,11 +52,11 @@ const Hero = () => {
           
           <div className="max-w-4xl mx-auto mb-8">
             <p className="text-2xl md:text-3xl text-muted-foreground mb-6 leading-relaxed font-medium">
-              The world's first <strong className="text-purple-600">Job Seekers Accelerator</strong> - a structured 12-week program that transforms fresh grads into <strong className="text-orange-600">industry-ready warriors</strong>
+              The complete <strong className="text-purple-600">HrTech × EduTech platform</strong> that revolutionizes talent discovery, development, and placement through AI-powered matching, skill-based hiring, and comprehensive career acceleration programs
             </p>
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-              Cohort-based training, peer learning, demo days with top employers, and 
-              <strong className="text-green-600"> guaranteed job placement</strong> - no resumes required!
+              From our flagship <strong className="text-orange-600">12-week accelerator</strong> to instant job matching, 
+              <strong className="text-green-600"> we're the complete hiring ecosystem</strong> - no resumes required!
             </p>
           </div>
 
@@ -65,7 +65,7 @@ const Hero = () => {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
               <div>
                 <div className="text-2xl md:text-3xl font-black text-purple-600">25K+</div>
-                <div className="text-sm text-muted-foreground font-semibold">Warriors Trained</div>
+                <div className="text-sm text-muted-foreground font-semibold">Active Users</div>
               </div>
               <div>
                 <div className="text-2xl md:text-3xl font-black text-blue-600">$2.5M</div>
@@ -77,15 +77,15 @@ const Hero = () => {
               </div>
               <div>
                 <div className="text-2xl md:text-3xl font-black text-green-600">85%</div>
-                <div className="text-sm text-muted-foreground font-semibold">FAANG Placement</div>
+                <div className="text-sm text-muted-foreground font-semibold">Match Success Rate</div>
               </div>
             </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
             <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-xl px-12 py-8 font-bold shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105">
-              <Calendar className="mr-3 w-6 h-6" />
-              Apply for Cohort 2025A
+              <Zap className="mr-3 w-6 h-6" />
+              Get Hired Today
               <ArrowRight className="ml-3 w-6 h-6" />
             </Button>
             <Button size="lg" variant="outline" className="text-xl px-12 py-8 border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white font-bold transition-all duration-300 transform hover:scale-105">
@@ -114,21 +114,21 @@ const Hero = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Users className="w-8 h-8 text-white" />
               </div>
-              <div className="text-4xl md:text-5xl font-black text-indigo-600 mb-2">98%</div>
-              <div className="text-sm text-muted-foreground font-semibold">Retention Rate</div>
+              <div className="text-4xl md:text-5xl font-black text-indigo-600 mb-2">3 Days</div>
+              <div className="text-sm text-muted-foreground font-semibold">Avg Hire Time</div>
             </div>
             <div className="text-center group">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Star className="w-8 h-8 text-white" />
               </div>
-              <div className="text-4xl md:text-5xl font-black text-green-600 mb-2">15%</div>
-              <div className="text-sm text-muted-foreground font-semibold">Acceptance Rate</div>
+              <div className="text-4xl md:text-5xl font-black text-green-600 mb-2">98%</div>
+              <div className="text-sm text-muted-foreground font-semibold">Retention Rate</div>
             </div>
           </div>
 
           {/* Trust Indicators */}
           <div className="mt-16 pt-8 border-t border-muted">
-            <p className="text-sm text-muted-foreground mb-6 font-medium">ALUMNI NOW WORKING AT</p>
+            <p className="text-sm text-muted-foreground mb-6 font-medium">TRUSTED BY TOP COMPANIES</p>
             <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
               <div className="text-2xl font-bold text-blue-600">Google</div>
               <div className="text-2xl font-bold text-blue-500">Meta</div>
