@@ -27,12 +27,12 @@ const Hero = () => {
             </span>
             <br />
             <span className="text-2xl md:text-3xl lg:text-4xl font-bold">
-              <span className="text-green-600">because, we believe</span>{' '}
-              <span className="text-red-600">no Resumes</span>{' '}
-              <span className="text-blue-600">To Get Hired</span>
+              <span className="text-emerald-500">because, we believe</span>{' '}
+              <span className="text-rose-500">no Resumes</span>{' '}
+              <span className="text-cyan-500">To Get Hired</span>
             </span>
             <br />
-            <span className="text-2xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent mt-4 block">
+            <span className="text-2xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 bg-clip-text text-transparent mt-4 block">
               The Complete Hiring Revolution is here
             </span>
           </h1>
