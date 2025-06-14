@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Zap, Target, Users, Star, TrendingUp, Award, Calendar, Trophy } from 'lucide-react';
@@ -36,6 +35,16 @@ const Hero = () => {
               in 12 Weeks
             </span>
           </h1>
+
+          {/* Marketing Message */}
+          <div className="mb-8">
+            <p className="text-lg md:text-xl text-muted-foreground mb-4 font-medium">
+              We Don't Believe in Resumes To Get Hired
+            </p>
+            <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-600 to-orange-600 bg-clip-text text-transparent">
+              Start-ups has Accelerators, Job Seekers has ResuHire
+            </p>
+          </div>
           
           <div className="max-w-4xl mx-auto mb-8">
             <p className="text-2xl md:text-3xl text-muted-foreground mb-6 leading-relaxed font-medium">
