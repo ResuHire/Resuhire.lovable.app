@@ -17,50 +17,44 @@ const Hero = () => {
         <div className="text-center max-w-5xl mx-auto">
           <div className="flex justify-center mb-6">
             <Badge className="mb-6 bg-gradient-to-r from-purple-600 to-blue-600 text-white border-0 px-6 py-2 text-lg animate-fade-in">
-              🚀 Next-Gen HrTech × EduTech Platform
+              🚀 The Future of HrTech × EduTech
             </Badge>
           </div>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-tight animate-fade-in">
             <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              The Future
-            </span>
-            <br />
-            <span className="text-foreground">of</span>
-            <br />
-            <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-              Hiring
+              ResuHire
             </span>
             <br />
             <span className="text-2xl md:text-4xl lg:text-5xl font-bold text-muted-foreground">
-              is Here
+              The Complete Hiring Revolution
             </span>
           </h1>
 
-          {/* Marketing Message */}
+          {/* Core Value Proposition */}
           <div className="mb-8">
-            <p className="text-lg md:text-xl text-muted-foreground mb-4 font-medium">
+            <p className="text-2xl md:text-3xl font-bold text-muted-foreground mb-4">
               We Don't Believe in Resumes To Get Hired
             </p>
-            <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-600 to-orange-600 bg-clip-text text-transparent">
+            <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-600 to-orange-600 bg-clip-text text-transparent mb-4">
               Startups Have Y Combinator, Job Seekers Have ResuHire
             </p>
-            <p className="text-lg md:text-xl text-muted-foreground mt-4 font-medium">
+            <p className="text-xl md:text-2xl text-muted-foreground font-medium">
               We're Building the Y Combinator for Talent → $200B Market Opportunity
             </p>
           </div>
           
           <div className="max-w-4xl mx-auto mb-8">
             <p className="text-2xl md:text-3xl text-muted-foreground mb-6 leading-relaxed font-medium">
-              The complete <strong className="text-purple-600">HrTech × EduTech platform</strong> that revolutionizes talent discovery, development, and placement through AI-powered matching, skill-based hiring, and comprehensive career acceleration programs
+              The world's first <strong className="text-purple-600">complete HrTech × EduTech ecosystem</strong> that revolutionizes how talent is discovered, developed, and placed across the entire hiring spectrum
             </p>
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-              From our flagship <strong className="text-orange-600">12-week accelerator</strong> to instant job matching, 
-              <strong className="text-green-600"> we're the complete hiring ecosystem</strong> - no resumes required!
+              From instant AI-powered job matching to comprehensive career acceleration programs, 
+              <strong className="text-green-600"> we're rebuilding the entire hiring industry</strong> from the ground up
             </p>
           </div>
 
-          {/* YC-Style Traction Stats */}
+          {/* Platform Capabilities */}
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-purple-100">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
               <div>
@@ -85,7 +79,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
             <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-xl px-12 py-8 font-bold shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105">
               <Zap className="mr-3 w-6 h-6" />
-              Get Hired Today
+              Start Your Journey
               <ArrowRight className="ml-3 w-6 h-6" />
             </Button>
             <Button size="lg" variant="outline" className="text-xl px-12 py-8 border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white font-bold transition-all duration-300 transform hover:scale-105">
@@ -94,7 +88,7 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Enhanced Market Validation Stats */}
+          {/* Market Impact Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center group">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
