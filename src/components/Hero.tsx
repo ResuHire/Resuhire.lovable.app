@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Zap, Target, Users, Star, TrendingUp, Award, Calendar, Trophy } from 'lucide-react';
@@ -45,16 +46,6 @@ const Hero = () => {
               We're Building the Y Combinator for Talent → <span className="text-green-600 font-bold">$200B Market Opportunity</span>
             </p>
           </div>
-          
-          <div className="max-w-4xl mx-auto mb-8">
-            <p className="text-2xl md:text-3xl text-muted-foreground mb-6 leading-relaxed font-medium">
-              The world's first <strong className="text-purple-600">complete HrTech × EduTech ecosystem</strong> that revolutionizes how talent is discovered, developed, and placed across the entire hiring spectrum
-            </p>
-            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-              From instant AI-powered job matching to comprehensive career acceleration programs, 
-              <strong className="text-green-600"> we're rebuilding the entire hiring industry</strong> from the ground up
-            </p>
-          </div>
 
           {/* Platform Capabilities */}
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-purple-100">
@@ -88,6 +79,16 @@ const Hero = () => {
               <Trophy className="mr-3 w-6 h-6" />
               Partner with Us
             </Button>
+          </div>
+          
+          <div className="max-w-4xl mx-auto mb-8">
+            <p className="text-2xl md:text-3xl text-muted-foreground mb-6 leading-relaxed font-medium">
+              The world's first <strong className="text-purple-600">complete HrTech × EduTech ecosystem</strong> that revolutionizes how talent is discovered, developed, and placed across the entire hiring spectrum
+            </p>
+            <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
+              From instant AI-powered job matching to comprehensive career acceleration programs, 
+              <strong className="text-green-600"> we're rebuilding the entire hiring industry</strong> from the ground up
+            </p>
           </div>
 
           {/* Market Impact Stats */}
