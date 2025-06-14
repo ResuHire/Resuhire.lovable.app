@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Zap, Target, Users, Star, TrendingUp, Award, Calendar, Trophy } from 'lucide-react';
@@ -43,7 +42,7 @@ const Hero = () => {
               Startups Have Y Combinator, Job Seekers Have ResuHire
             </p>
             <p className="text-xl md:text-2xl text-muted-foreground font-medium">
-              We're Building the Y Combinator for Talent → $200B Market Opportunity
+              We're Building the Y Combinator for Talent → <span className="text-green-600 font-bold">$200B Market Opportunity</span>
             </p>
           </div>
           
