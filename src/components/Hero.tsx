@@ -27,9 +27,9 @@ const Hero = () => {
             </span>
             <br />
             <span className="text-2xl md:text-3xl lg:text-4xl font-bold">
-              <span className="text-emerald-500">because, we believe</span>{' '}
-              <span className="text-rose-500">no Resumes</span>{' '}
-              <span className="text-cyan-500">To Get Hired</span>
+              <span className="text-indigo-600">because, we believe</span>{' '}
+              <span className="bg-gradient-to-r from-red-500 to-pink-500 bg-clip-text text-transparent">no Resumes</span>{' '}
+              <span className="bg-gradient-to-r from-green-500 to-emerald-500 bg-clip-text text-transparent">To Get Hired</span>
             </span>
             <br />
             <span className="text-2xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-amber-500 via-orange-500 to-red-500 bg-clip-text text-transparent mt-4 block">
