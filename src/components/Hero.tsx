@@ -24,7 +24,7 @@ const Hero = () => {
           
           <div className="max-w-4xl mx-auto mb-12">
             <p className="text-2xl md:text-3xl font-light text-gray-700 mb-6 leading-relaxed">
-              Startups have Y Combinator.
+              Startups have <span className="text-orange-600 font-semibold">Y Combinator.</span>
             </p>
             <p className="text-2xl md:text-3xl font-bold text-gray-900 mb-8 leading-relaxed">
               Job seekers have ResuHire.
