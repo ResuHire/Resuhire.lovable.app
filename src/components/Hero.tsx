@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Zap, Target, Users, Star, TrendingUp, Award } from 'lucide-react';
+import { ArrowRight, Zap, Target, Users, Star, TrendingUp, Award, Calendar, Trophy } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 
 const Hero = () => {
@@ -17,41 +17,67 @@ const Hero = () => {
         <div className="text-center max-w-5xl mx-auto">
           <div className="flex justify-center mb-6">
             <Badge className="mb-6 bg-gradient-to-r from-purple-600 to-blue-600 text-white border-0 px-6 py-2 text-lg animate-fade-in">
-              🚀 The Future of Hiring is Here
+              🚀 World's First Job Seekers Accelerator
             </Badge>
           </div>
           
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-black mb-8 leading-tight animate-fade-in">
             <span className="bg-gradient-to-r from-purple-600 via-blue-600 to-indigo-600 bg-clip-text text-transparent">
-              We Don't Believe
+              From Student
             </span>
             <br />
-            <span className="text-foreground">in Resumes</span>
+            <span className="text-foreground">to</span>
             <br />
             <span className="bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-              To Get Hired
+              Warrior
+            </span>
+            <br />
+            <span className="text-2xl md:text-4xl lg:text-5xl font-bold text-muted-foreground">
+              in 12 Weeks
             </span>
           </h1>
           
           <div className="max-w-4xl mx-auto mb-8">
             <p className="text-2xl md:text-3xl text-muted-foreground mb-6 leading-relaxed font-medium">
-              ResuHire merges <strong className="text-purple-600">AI</strong>, <strong className="text-blue-600">HrTech</strong> & <strong className="text-indigo-600">EduTech</strong> to transform fresh grads into <strong className="text-orange-600">warriors</strong>
+              The world's first <strong className="text-purple-600">Job Seekers Accelerator</strong> - a structured 12-week program that transforms fresh grads into <strong className="text-orange-600">industry warriors</strong>
             </p>
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
-              Get FAANG internships from year 1, master skills through our training, and land jobs with 
-              <strong className="text-green-600"> 85% matching accuracy</strong> - no traditional applications!
+              Cohort-based training, peer learning, demo days with top employers, and 
+              <strong className="text-green-600"> guaranteed job placement</strong> - no resumes required!
             </p>
+          </div>
+
+          {/* Accelerator Stats */}
+          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-purple-100">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+              <div>
+                <div className="text-2xl md:text-3xl font-black text-purple-600">Cohort 2025A</div>
+                <div className="text-sm text-muted-foreground font-semibold">Now Accepting</div>
+              </div>
+              <div>
+                <div className="text-2xl md:text-3xl font-black text-blue-600">15%</div>
+                <div className="text-sm text-muted-foreground font-semibold">Acceptance Rate</div>
+              </div>
+              <div>
+                <div className="text-2xl md:text-3xl font-black text-indigo-600">12 Weeks</div>
+                <div className="text-sm text-muted-foreground font-semibold">Intensive Program</div>
+              </div>
+              <div>
+                <div className="text-2xl md:text-3xl font-black text-green-600">100%</div>
+                <div className="text-sm text-muted-foreground font-semibold">Job Placement</div>
+              </div>
+            </div>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
             <Button size="lg" className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-xl px-12 py-8 font-bold shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 transform hover:scale-105">
-              <Users className="mr-3 w-6 h-6" />
-              Become a Warrior
+              <Calendar className="mr-3 w-6 h-6" />
+              Apply for Cohort 2025A
               <ArrowRight className="ml-3 w-6 h-6" />
             </Button>
             <Button size="lg" variant="outline" className="text-xl px-12 py-8 border-2 border-purple-600 text-purple-600 hover:bg-purple-600 hover:text-white font-bold transition-all duration-300 transform hover:scale-105">
-              <Target className="mr-3 w-6 h-6" />
-              For Recruiters
+              <Trophy className="mr-3 w-6 h-6" />
+              Partner with Us
             </Button>
           </div>
 
@@ -62,40 +88,40 @@ const Hero = () => {
                 <TrendingUp className="w-8 h-8 text-white" />
               </div>
               <div className="text-4xl md:text-5xl font-black text-purple-600 mb-2">85%</div>
-              <div className="text-sm text-muted-foreground font-semibold">Match Accuracy</div>
+              <div className="text-sm text-muted-foreground font-semibold">FAANG Placement</div>
             </div>
             <div className="text-center group">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Award className="w-8 h-8 text-white" />
               </div>
-              <div className="text-4xl md:text-5xl font-black text-blue-600 mb-2">FAANG</div>
-              <div className="text-sm text-muted-foreground font-semibold">From Year 1</div>
+              <div className="text-4xl md:text-5xl font-black text-blue-600 mb-2">$180K</div>
+              <div className="text-sm text-muted-foreground font-semibold">Avg Starting Salary</div>
             </div>
             <div className="text-center group">
               <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
-                <Zap className="w-8 h-8 text-white" />
+                <Users className="w-8 h-8 text-white" />
               </div>
-              <div className="text-4xl md:text-5xl font-black text-indigo-600 mb-2">0</div>
-              <div className="text-sm text-muted-foreground font-semibold">Resumes Needed</div>
+              <div className="text-4xl md:text-5xl font-black text-indigo-600 mb-2">20</div>
+              <div className="text-sm text-muted-foreground font-semibold">Warriors per Cohort</div>
             </div>
             <div className="text-center group">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Star className="w-8 h-8 text-white" />
               </div>
-              <div className="text-4xl md:text-5xl font-black text-green-600 mb-2">100%</div>
-              <div className="text-sm text-muted-foreground font-semibold">Skills Focus</div>
+              <div className="text-4xl md:text-5xl font-black text-green-600 mb-2">500+</div>
+              <div className="text-sm text-muted-foreground font-semibold">Alumni Network</div>
             </div>
           </div>
 
           {/* Trust Indicators */}
           <div className="mt-16 pt-8 border-t border-muted">
-            <p className="text-sm text-muted-foreground mb-6 font-medium">TRUSTED BY STUDENTS AT</p>
+            <p className="text-sm text-muted-foreground mb-6 font-medium">ALUMNI NOW WORKING AT</p>
             <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-              <div className="text-2xl font-bold text-blue-600">MIT</div>
-              <div className="text-2xl font-bold text-red-600">Stanford</div>
-              <div className="text-2xl font-bold text-yellow-600">Berkeley</div>
-              <div className="text-2xl font-bold text-green-600">Harvard</div>
-              <div className="text-2xl font-bold text-purple-600">CMU</div>
+              <div className="text-2xl font-bold text-blue-600">Google</div>
+              <div className="text-2xl font-bold text-blue-500">Meta</div>
+              <div className="text-2xl font-bold text-orange-600">Amazon</div>
+              <div className="text-2xl font-bold text-gray-600">Apple</div>
+              <div className="text-2xl font-bold text-red-600">Netflix</div>
             </div>
           </div>
         </div>
