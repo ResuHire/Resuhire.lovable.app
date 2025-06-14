@@ -26,16 +26,19 @@ const Hero = () => {
               ResuHire
             </span>
             <br />
-            <span className="text-2xl md:text-4xl lg:text-5xl font-bold text-muted-foreground">
-              The Complete Hiring Revolution
+            <span className="text-2xl md:text-3xl lg:text-4xl font-bold">
+              <span className="text-green-600">because, we believe</span>{' '}
+              <span className="text-red-600">no Resumes</span>{' '}
+              <span className="text-blue-600">To Get Hired</span>
+            </span>
+            <br />
+            <span className="text-2xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-orange-600 to-pink-600 bg-clip-text text-transparent mt-4 block">
+              The Complete Hiring Revolution is here
             </span>
           </h1>
 
           {/* Core Value Proposition */}
           <div className="mb-8">
-            <p className="text-2xl md:text-3xl font-bold text-muted-foreground mb-4">
-              We Don't Believe in Resumes To Get Hired
-            </p>
             <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-600 to-orange-600 bg-clip-text text-transparent mb-4">
               Startups Have Y Combinator, Job Seekers Have ResuHire
             </p>
