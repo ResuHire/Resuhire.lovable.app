@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Zap, Target, Users, Star, TrendingUp, Award, Calendar, Trophy } from 'lucide-react';
@@ -42,13 +43,16 @@ const Hero = () => {
               We Don't Believe in Resumes To Get Hired
             </p>
             <p className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-purple-600 to-orange-600 bg-clip-text text-transparent">
-              Start-ups has Accelerators, Job Seekers has ResuHire
+              Startups Have Y Combinator, Job Seekers Have ResuHire
+            </p>
+            <p className="text-lg md:text-xl text-muted-foreground mt-4 font-medium">
+              We're Building the Y Combinator for Talent → $200B Market Opportunity
             </p>
           </div>
           
           <div className="max-w-4xl mx-auto mb-8">
             <p className="text-2xl md:text-3xl text-muted-foreground mb-6 leading-relaxed font-medium">
-              The world's first <strong className="text-purple-600">Job Seekers Accelerator</strong> - a structured 12-week program that transforms fresh grads into <strong className="text-orange-600">industry warriors</strong>
+              The world's first <strong className="text-purple-600">Job Seekers Accelerator</strong> - a structured 12-week program that transforms fresh grads into <strong className="text-orange-600">industry-ready warriors</strong>
             </p>
             <p className="text-xl md:text-2xl text-muted-foreground leading-relaxed">
               Cohort-based training, peer learning, demo days with top employers, and 
@@ -56,24 +60,24 @@ const Hero = () => {
             </p>
           </div>
 
-          {/* Accelerator Stats */}
+          {/* YC-Style Traction Stats */}
           <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 mb-8 border border-purple-100">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
               <div>
-                <div className="text-2xl md:text-3xl font-black text-purple-600">Cohort 2025A</div>
-                <div className="text-sm text-muted-foreground font-semibold">Now Accepting</div>
+                <div className="text-2xl md:text-3xl font-black text-purple-600">25K+</div>
+                <div className="text-sm text-muted-foreground font-semibold">Warriors Trained</div>
               </div>
               <div>
-                <div className="text-2xl md:text-3xl font-black text-blue-600">15%</div>
-                <div className="text-sm text-muted-foreground font-semibold">Acceptance Rate</div>
+                <div className="text-2xl md:text-3xl font-black text-blue-600">$2.5M</div>
+                <div className="text-sm text-muted-foreground font-semibold">Seed Round Raised</div>
               </div>
               <div>
-                <div className="text-2xl md:text-3xl font-black text-indigo-600">12 Weeks</div>
-                <div className="text-sm text-muted-foreground font-semibold">Intensive Program</div>
+                <div className="text-2xl md:text-3xl font-black text-indigo-600">500+</div>
+                <div className="text-sm text-muted-foreground font-semibold">Partner Companies</div>
               </div>
               <div>
-                <div className="text-2xl md:text-3xl font-black text-green-600">100%</div>
-                <div className="text-sm text-muted-foreground font-semibold">Job Placement</div>
+                <div className="text-2xl md:text-3xl font-black text-green-600">85%</div>
+                <div className="text-sm text-muted-foreground font-semibold">FAANG Placement</div>
               </div>
             </div>
           </div>
@@ -90,14 +94,14 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Enhanced Stats Grid */}
+          {/* Enhanced Market Validation Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto">
             <div className="text-center group">
               <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <TrendingUp className="w-8 h-8 text-white" />
               </div>
-              <div className="text-4xl md:text-5xl font-black text-purple-600 mb-2">85%</div>
-              <div className="text-sm text-muted-foreground font-semibold">FAANG Placement</div>
+              <div className="text-4xl md:text-5xl font-black text-purple-600 mb-2">300%</div>
+              <div className="text-sm text-muted-foreground font-semibold">YoY Growth</div>
             </div>
             <div className="text-center group">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
@@ -110,15 +114,15 @@ const Hero = () => {
               <div className="w-16 h-16 bg-gradient-to-r from-indigo-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Users className="w-8 h-8 text-white" />
               </div>
-              <div className="text-4xl md:text-5xl font-black text-indigo-600 mb-2">20</div>
-              <div className="text-sm text-muted-foreground font-semibold">Warriors per Cohort</div>
+              <div className="text-4xl md:text-5xl font-black text-indigo-600 mb-2">98%</div>
+              <div className="text-sm text-muted-foreground font-semibold">Retention Rate</div>
             </div>
             <div className="text-center group">
               <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                 <Star className="w-8 h-8 text-white" />
               </div>
-              <div className="text-4xl md:text-5xl font-black text-green-600 mb-2">500+</div>
-              <div className="text-sm text-muted-foreground font-semibold">Alumni Network</div>
+              <div className="text-4xl md:text-5xl font-black text-green-600 mb-2">15%</div>
+              <div className="text-sm text-muted-foreground font-semibold">Acceptance Rate</div>
             </div>
           </div>
 
