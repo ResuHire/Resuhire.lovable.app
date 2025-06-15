@@ -1,157 +1,247 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { CheckCircle, X, Trophy, Target } from 'lucide-react';
+import { Check, X, ChevronDown, ChevronUp, Star } from 'lucide-react';
 
 const ComparisonTable = () => {
-  const features = [
-    { feature: "No Resume Needed", resuhire: true, torre: true, hireart: true, simplify: false, extern: false, linkedin: false },
-    { feature: "No Cover Letter", resuhire: true, torre: true, hireart: true, simplify: false, extern: false, linkedin: false },
-    { feature: "Skill-Based Matching (85%+)", resuhire: true, torre: true, hireart: true, simplify: true, extern: false, linkedin: false },
-    { feature: "AI-Driven Matching", resuhire: true, torre: true, hireart: true, simplify: true, extern: false, linkedin: false },
-    { feature: "Dynamic Form Instead of Resume", resuhire: true, torre: true, hireart: true, simplify: false, extern: false, linkedin: false },
-    { feature: "End-to-End Career Formation", resuhire: true, torre: false, hireart: false, simplify: false, extern: false, linkedin: false },
-    { feature: "Technical Training (Hard Skills)", resuhire: true, torre: false, hireart: false, simplify: false, extern: true, linkedin: false },
-    { feature: "Soft Skills (Body Language, Mindset)", resuhire: true, torre: false, hireart: false, simplify: false, extern: false, linkedin: false },
-    { feature: "Mental & Personal Development", resuhire: true, torre: false, hireart: false, simplify: false, extern: false, linkedin: false },
-    { feature: "Hackathons & Bootcamps", resuhire: true, torre: false, hireart: false, simplify: false, extern: true, linkedin: false },
-    { feature: "FAANG Internships Offered", resuhire: true, torre: false, hireart: false, simplify: false, extern: false, linkedin: false },
-    { feature: "Jobs at Startups", resuhire: true, torre: true, hireart: true, simplify: true, extern: false, linkedin: true },
-    { feature: "Youth-Led, Youth-Focused", resuhire: true, torre: false, hireart: false, simplify: true, extern: true, linkedin: false },
-    { feature: "Built-In Referral System", resuhire: true, torre: false, hireart: false, simplify: false, extern: false, linkedin: false },
-    { feature: "Community / Mentorship", resuhire: true, torre: false, hireart: false, simplify: false, extern: false, linkedin: false },
-  ];
+  const [expandedFeature, setExpandedFeature] = useState<string | null>(null);
 
   const competitors = [
-    { name: "ResuHire", key: "resuhire", color: "bg-purple-600", highlight: true },
-    { name: "Torre.ai", key: "torre", color: "bg-gray-400", highlight: false },
-    { name: "HireArt (YC)", key: "hireart", color: "bg-gray-400", highlight: false },
-    { name: "Simplify", key: "simplify", color: "bg-gray-400", highlight: false },
-    { name: "Extern (YC)", key: "extern", color: "bg-gray-400", highlight: false },
-    { name: "LinkedIn", key: "linkedin", color: "bg-gray-400", highlight: false },
+    { name: 'ResuHire', highlight: true, color: 'bg-gradient-to-r from-purple-600 to-blue-600' },
+    { name: 'Torre.ai', highlight: false, color: 'bg-gray-100' },
+    { name: 'HireArt (YC)', highlight: false, color: 'bg-gray-100' },
+    { name: 'Simplify', highlight: false, color: 'bg-gray-100' },
+    { name: 'Extern (YC)', highlight: false, color: 'bg-gray-100' },
+    { name: 'LinkedIn', highlight: false, color: 'bg-gray-100' }
   ];
 
-  const CheckIcon = ({ value, isResuhire = false }) => {
-    if (value) {
-      return <CheckCircle className={`w-5 h-5 ${isResuhire ? 'text-purple-600' : 'text-green-500'}`} />;
+  const features = [
+    {
+      category: "Application Process",
+      items: [
+        {
+          name: "No Resume Needed",
+          description: "Apply without traditional resume requirements",
+          values: [true, true, true, false, false, false]
+        },
+        {
+          name: "No Cover Letter",
+          description: "Skip the tedious cover letter writing process",
+          values: [true, true, true, false, false, false]
+        },
+        {
+          name: "Dynamic Form Instead of Resume",
+          description: "Interactive assessment replaces static documents",
+          values: [true, true, true, false, false, false]
+        }
+      ]
+    },
+    {
+      category: "Matching & AI",
+      items: [
+        {
+          name: "Skill-Based Matching (85%+)",
+          description: "Advanced algorithms match based on actual skills",
+          values: [true, true, true, true, false, false]
+        },
+        {
+          name: "AI-Driven Matching",
+          description: "Machine learning powers job recommendations",
+          values: [true, true, true, true, false, false]
+        }
+      ]
+    },
+    {
+      category: "Career Development",
+      items: [
+        {
+          name: "End-to-End Career Formation",
+          description: "Complete transformation from student to professional",
+          values: [true, false, false, false, false, false]
+        },
+        {
+          name: "Technical Training (Hard Skills)",
+          description: "Comprehensive coding and technical skill development",
+          values: [true, false, false, false, true, false]
+        },
+        {
+          name: "Soft Skills (Body Language, Mindset)",
+          description: "Communication, presentation, and interpersonal skills",
+          values: [true, false, false, false, false, false]
+        },
+        {
+          name: "Mental & Personal Development",
+          description: "Mindset coaching and personal growth programs",
+          values: [true, false, false, false, false, false]
+        }
+      ]
+    },
+    {
+      category: "Opportunities",
+      items: [
+        {
+          name: "FAANG Internships Offered",
+          description: "Direct access to top-tier tech company positions",
+          values: [true, false, false, false, false, false]
+        },
+        {
+          name: "Jobs at Startups",
+          description: "Connections with innovative startup companies",
+          values: [true, true, true, true, false, true]
+        },
+        {
+          name: "Hackathons & Bootcamps",
+          description: "Hands-on learning through competitive events",
+          values: [true, false, false, false, true, false]
+        }
+      ]
+    },
+    {
+      category: "Community & Support",
+      items: [
+        {
+          name: "Youth-Led, Youth-Focused",
+          description: "Built by and for the next generation",
+          values: [true, false, false, true, true, false]
+        },
+        {
+          name: "Built-In Referral System",
+          description: "Internal network for job referrals and connections",
+          values: [true, false, false, false, false, false]
+        },
+        {
+          name: "Community / Mentorship",
+          description: "Active peer support and mentor guidance",
+          values: [true, false, false, false, false, false]
+        }
+      ]
     }
-    return <X className="w-5 h-5 text-red-400" />;
+  ];
+
+  const toggleFeature = (featureName: string) => {
+    setExpandedFeature(expandedFeature === featureName ? null : featureName);
+  };
+
+  const getUniqueFeatureCount = () => {
+    return features.reduce((total, category) => {
+      return total + category.items.filter(item => 
+        item.values[0] && !item.values.slice(1).some(v => v)
+      ).length;
+    }, 0);
   };
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <Badge className="mb-4 bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700">
-            🚀 Competitive Analysis
+            ⚡ Competitive Analysis
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            ResuHire vs <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">The Competition</span>
+            Why <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">ResuHire</span> Leads the Market
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            See why ResuHire is the only platform that combines AI matching, skill-building, personal growth, FAANG access, and community in one complete solution.
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
+            We're the only platform combining AI matching, skill-building, personal growth, FAANG access, and community in one complete solution.
           </p>
+          <div className="flex items-center justify-center gap-2 text-lg font-semibold text-purple-600">
+            <Star className="w-6 h-6 fill-current" />
+            <span>{getUniqueFeatureCount()} Unique Features Only Available on ResuHire</span>
+            <Star className="w-6 h-6 fill-current" />
+          </div>
         </div>
 
         <div className="max-w-7xl mx-auto">
-          <Card className="border-0 shadow-xl overflow-hidden">
-            <CardHeader className="bg-gradient-to-r from-purple-50 to-blue-50 border-b">
-              <div className="flex items-center gap-3">
-                <Trophy className="w-6 h-6 text-purple-600" />
-                <CardTitle className="text-2xl">Feature Comparison</CardTitle>
+          <Card className="border-0 shadow-2xl overflow-hidden">
+            <CardHeader className="bg-gradient-to-r from-purple-600 to-blue-600 text-white p-0">
+              <div className="grid grid-cols-7 gap-0">
+                <div className="p-6">
+                  <CardTitle className="text-lg font-bold">Features</CardTitle>
+                </div>
+                {competitors.map((competitor, index) => (
+                  <div key={index} className={`p-6 text-center ${competitor.highlight ? 'bg-white/20' : 'bg-black/10'} hover:bg-white/30 transition-colors`}>
+                    <div className="font-bold text-sm">{competitor.name}</div>
+                    {competitor.highlight && (
+                      <Badge className="mt-2 bg-yellow-400 text-yellow-900 text-xs">
+                        YOU
+                      </Badge>
+                    )}
+                  </div>
+                ))}
               </div>
             </CardHeader>
             <CardContent className="p-0">
-              <div className="overflow-x-auto">
-                <Table>
-                  <TableHeader>
-                    <TableRow className="bg-gray-50">
-                      <TableHead className="font-bold text-gray-900 sticky left-0 bg-gray-50 z-10 min-w-[280px]">
-                        Feature / Platform
-                      </TableHead>
-                      {competitors.map((competitor) => (
-                        <TableHead 
-                          key={competitor.key} 
-                          className={`text-center font-bold min-w-[120px] ${
-                            competitor.highlight 
-                              ? 'bg-purple-100 text-purple-800 border-l-4 border-purple-600' 
-                              : 'text-gray-700'
-                          }`}
-                        >
-                          {competitor.name}
-                          {competitor.highlight && (
-                            <div className="text-xs font-normal text-purple-600 mt-1">(You)</div>
-                          )}
-                        </TableHead>
-                      ))}
-                    </TableRow>
-                  </TableHeader>
-                  <TableBody>
-                    {features.map((row, index) => (
-                      <TableRow 
-                        key={index} 
-                        className={`hover:bg-gray-50 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-25'}`}
+              {features.map((category, categoryIndex) => (
+                <div key={categoryIndex}>
+                  <div className="bg-gray-50 px-6 py-3 border-b">
+                    <h3 className="font-bold text-gray-700 uppercase text-sm tracking-wide">
+                      {category.category}
+                    </h3>
+                  </div>
+                  {category.items.map((feature, featureIndex) => (
+                    <div key={featureIndex}>
+                      <div 
+                        className="grid grid-cols-7 gap-0 border-b border-gray-100 hover:bg-gray-50 transition-colors cursor-pointer"
+                        onClick={() => toggleFeature(feature.name)}
                       >
-                        <TableCell className="font-medium sticky left-0 bg-inherit z-10 border-r">
-                          {row.feature}
-                        </TableCell>
-                        <TableCell className="text-center bg-purple-25 border-l-4 border-purple-600">
-                          <CheckIcon value={row.resuhire} isResuhire={true} />
-                        </TableCell>
-                        <TableCell className="text-center">
-                          <CheckIcon value={row.torre} />
-                        </TableCell>
-                        <TableCell className="text-center">
-                          <CheckIcon value={row.hireart} />
-                        </TableCell>
-                        <TableCell className="text-center">
-                          <CheckIcon value={row.simplify} />
-                        </TableCell>
-                        <TableCell className="text-center">
-                          <CheckIcon value={row.extern} />
-                        </TableCell>
-                        <TableCell className="text-center">
-                          <CheckIcon value={row.linkedin} />
-                        </TableCell>
-                      </TableRow>
-                    ))}
-                  </TableBody>
-                </Table>
-              </div>
+                        <div className="p-4 flex items-center justify-between">
+                          <span className="font-medium text-gray-800">{feature.name}</span>
+                          <div className="flex items-center gap-2">
+                            {feature.values[0] && !feature.values.slice(1).some(v => v) && (
+                              <Badge variant="secondary" className="text-xs bg-purple-100 text-purple-700">
+                                UNIQUE
+                              </Badge>
+                            )}
+                            {expandedFeature === feature.name ? (
+                              <ChevronUp className="w-4 h-4 text-gray-400" />
+                            ) : (
+                              <ChevronDown className="w-4 h-4 text-gray-400" />
+                            )}
+                          </div>
+                        </div>
+                        {feature.values.map((value, valueIndex) => (
+                          <div key={valueIndex} className={`p-4 text-center ${valueIndex === 0 ? 'bg-purple-50' : ''} hover:bg-opacity-80 transition-colors`}>
+                            {value ? (
+                              <Check className={`w-6 h-6 mx-auto ${valueIndex === 0 ? 'text-purple-600' : 'text-green-600'} animate-pulse`} />
+                            ) : (
+                              <X className="w-6 h-6 mx-auto text-gray-300" />
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                      {expandedFeature === feature.name && (
+                        <div className="bg-blue-50 px-6 py-4 border-b border-blue-100 animate-fade-in">
+                          <p className="text-gray-700 italic">{feature.description}</p>
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              ))}
             </CardContent>
           </Card>
 
-          {/* Summary */}
-          <div className="mt-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white">
-            <div className="text-center mb-8">
-              <Target className="w-12 h-12 mx-auto mb-4" />
-              <h3 className="text-3xl font-bold mb-4">Why ResuHire Wins</h3>
-              <p className="text-xl opacity-90 max-w-4xl mx-auto">
-                You're the only platform combining AI matching, skill-building, personal growth, FAANG access, and community in one complete ecosystem.
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8 text-center">
-              <div className="bg-white/10 rounded-lg p-6">
-                <div className="text-2xl font-bold mb-2">Complete Solution</div>
-                <p className="opacity-90">End-to-end career transformation, not just matching</p>
+          {/* Summary Card */}
+          <div className="mt-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 text-white text-center">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              🏆 The Complete Solution
+            </h3>
+            <p className="text-lg opacity-90 mb-6 max-w-3xl mx-auto">
+              Others focus on parts of the journey (matching, learning, externships)—ResuHire builds warriors from start to hire.
+            </p>
+            <div className="grid md:grid-cols-3 gap-6 mt-8">
+              <div className="bg-white/20 rounded-lg p-4">
+                <div className="text-2xl font-bold mb-2">{getUniqueFeatureCount()}</div>
+                <div className="text-sm">Exclusive Features</div>
               </div>
-              <div className="bg-white/10 rounded-lg p-6">
-                <div className="text-2xl font-bold mb-2">FAANG Access</div>
-                <p className="opacity-90">Direct pipeline to top tech companies</p>
+              <div className="bg-white/20 rounded-lg p-4">
+                <div className="text-2xl font-bold mb-2">100%</div>
+                <div className="text-sm">End-to-End Solution</div>
               </div>
-              <div className="bg-white/10 rounded-lg p-6">
-                <div className="text-2xl font-bold mb-2">Holistic Development</div>
-                <p className="opacity-90">Technical + soft skills + mental coaching</p>
+              <div className="bg-white/20 rounded-lg p-4">
+                <div className="text-2xl font-bold mb-2">1st</div>
+                <div className="text-sm">Job Seekers Accelerator</div>
               </div>
-            </div>
-
-            <div className="text-center mt-8">
-              <p className="text-lg font-semibold">
-                Others focus on parts of the journey—ResuHire builds heroes from start to hire.
-              </p>
             </div>
           </div>
         </div>
