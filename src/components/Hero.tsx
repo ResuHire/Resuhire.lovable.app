@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Users, Building, GraduationCap, Trophy, Briefcase, Target, CheckCircle, Star, TrendingUp } from 'lucide-react';
@@ -18,9 +17,12 @@ const Hero = () => {
             ResuHire
           </h1>
           
-          {/* Enhanced Tagline - User Feedback */}
-          <p className="text-2xl md:text-3xl font-light text-gray-600 mb-4 tracking-wide">
+          {/* Enhanced Taglines - User Feedback */}
+          <p className="text-2xl md:text-3xl font-light text-gray-600 mb-2 tracking-wide">
             No Resume to get Hired
+          </p>
+          <p className="text-lg md:text-xl font-light text-gray-500 mb-6 tracking-wide">
+            Transform students into hired professionals - no resume required
           </p>
           
           {/* Y Combinator Comparison */}
