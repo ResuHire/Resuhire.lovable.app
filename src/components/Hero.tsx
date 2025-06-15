@@ -18,10 +18,20 @@ const Hero = () => {
             ResuHire
           </h1>
           
-          {/* Concise Tagline - YC Feedback */}
-          <p className="text-2xl md:text-3xl font-light text-gray-600 mb-8 tracking-wide">
-            Transform students into hired professionals - no resume required
+          {/* Enhanced Tagline - User Feedback */}
+          <p className="text-2xl md:text-3xl font-light text-gray-600 mb-4 tracking-wide">
+            No Resume to get Hired
           </p>
+          
+          {/* Y Combinator Comparison */}
+          <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl p-6 mb-8 max-w-2xl mx-auto border border-purple-200">
+            <p className="text-xl md:text-2xl font-semibold text-gray-800">
+              Startups have <span className="text-orange-600 font-bold">Y Combinator</span>.
+            </p>
+            <p className="text-xl md:text-2xl font-semibold text-gray-800 mt-2">
+              Job seekers have <span className="text-purple-600 font-bold">ResuHire</span>.
+            </p>
+          </div>
           
           {/* Clear Value Props - YC Feedback */}
           <div className="max-w-4xl mx-auto mb-12">
