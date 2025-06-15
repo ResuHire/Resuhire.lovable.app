@@ -5,6 +5,7 @@ import SocialProof from '@/components/SocialProof';
 import Stats from '@/components/Stats';
 import DualValue from '@/components/DualValue';
 import Features from '@/components/Features';
+import OnboardingFlow from '@/components/OnboardingFlow';
 import ProgressTracking from '@/components/ProgressTracking';
 import EmployerConnect from '@/components/EmployerConnect';
 import Gamification from '@/components/Gamification';
@@ -26,6 +27,7 @@ const Index = () => {
       <Navigation />
       <Hero />
       <SocialProof />
+      <OnboardingFlow />
       <Stats />
       <DualValue />
       <Features />
