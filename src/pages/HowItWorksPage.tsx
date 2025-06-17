@@ -4,6 +4,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import HowItWorks from '@/components/HowItWorks';
 import ComparisonTable from '@/components/ComparisonTable';
+import VisualProcess from '@/components/VisualProcess';
 
 const HowItWorksPage = () => {
   return (
@@ -20,6 +21,7 @@ const HowItWorksPage = () => {
             </p>
           </div>
         </div>
+        <VisualProcess />
         <HowItWorks />
         <ComparisonTable />
       </div>
