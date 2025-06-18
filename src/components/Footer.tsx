@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Building, Mail, Twitter, Linkedin, Github } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -31,11 +32,11 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-gray-900 mb-6">For Talent</h4>
             <ul className="space-y-3 text-gray-600">
-              <li><a href="#" className="hover:text-orange-600 transition-colors">Application Process</a></li>
-              <li><a href="#" className="hover:text-orange-600 transition-colors">Program Structure</a></li>
-              <li><a href="#" className="hover:text-orange-600 transition-colors">Success Stories</a></li>
-              <li><a href="#" className="hover:text-orange-600 transition-colors">Career Outcomes</a></li>
-              <li><a href="#" className="hover:text-orange-600 transition-colors">Alumni Network</a></li>
+              <li><Link to="/application-process" className="hover:text-orange-600 transition-colors">Application Process</Link></li>
+              <li><Link to="/program-structure" className="hover:text-orange-600 transition-colors">Program Structure</Link></li>
+              <li><Link to="/success-stories" className="hover:text-orange-600 transition-colors">Success Stories</Link></li>
+              <li><Link to="/career-outcomes" className="hover:text-orange-600 transition-colors">Career Outcomes</Link></li>
+              <li><Link to="/alumni-network" className="hover:text-orange-600 transition-colors">Alumni Network</Link></li>
             </ul>
           </div>
 
@@ -43,11 +44,11 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-gray-900 mb-6">For Companies</h4>
             <ul className="space-y-3 text-gray-600">
-              <li><a href="#" className="hover:text-orange-600 transition-colors">Partner Program</a></li>
-              <li><a href="#" className="hover:text-orange-600 transition-colors">Talent Pipeline</a></li>
-              <li><a href="#" className="hover:text-orange-600 transition-colors">Hiring Solutions</a></li>
-              <li><a href="#" className="hover:text-orange-600 transition-colors">Custom Programs</a></li>
-              <li><a href="#" className="hover:text-orange-600 transition-colors">Analytics Dashboard</a></li>
+              <li><Link to="/partner-program" className="hover:text-orange-600 transition-colors">Partner Program</Link></li>
+              <li><Link to="/talent-pipeline" className="hover:text-orange-600 transition-colors">Talent Pipeline</Link></li>
+              <li><Link to="/hiring-solutions" className="hover:text-orange-600 transition-colors">Hiring Solutions</Link></li>
+              <li><Link to="/custom-programs" className="hover:text-orange-600 transition-colors">Custom Programs</Link></li>
+              <li><Link to="/analytics-dashboard" className="hover:text-orange-600 transition-colors">Analytics Dashboard</Link></li>
             </ul>
           </div>
         </div>
