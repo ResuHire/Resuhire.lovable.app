@@ -1,3 +1,4 @@
+
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -6,8 +7,14 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Handshake, Target, Users, TrendingUp, Clock, Award } from 'lucide-react';
+import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const PartnerProgram = () => {
+  const { elementRef: heroRef, isVisible: heroVisible } = useScrollAnimation();
+  const { elementRef: benefitsRef, isVisible: benefitsVisible } = useScrollAnimation();
+  const { elementRef: tiersRef, isVisible: tiersVisible } = useScrollAnimation();
+  const { elementRef: successRef, isVisible: successVisible } = useScrollAnimation();
+
   const partnerTiers = [
     {
       tier: "Startup Partner",
@@ -52,12 +59,17 @@ const PartnerProgram = () => {
         <Navigation />
         <div className="pt-16">
           {/* Hero Section */}
-          <div className="py-20 bg-gradient-to-b from-gray-50 to-white">
+          <div 
+            ref={heroRef}
+            className={`py-20 bg-gradient-to-b from-gray-50 to-white transition-all duration-1000 ${
+              heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+          >
             <div className="container mx-auto px-4 text-center">
-              <Badge className="mb-4 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700">
+              <Badge className="mb-4 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 hover:scale-105 transition-transform duration-300 cursor-pointer">
                 🤝 Partner Program
               </Badge>
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6 hover:scale-105 transition-transform duration-500 cursor-default">
                 Partner with <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Tomorrow's Talent</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
@@ -72,25 +84,30 @@ const PartnerProgram = () => {
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
                 <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Why Partner with ResuHire?</h2>
-                <div className="grid md:grid-cols-3 gap-8">
-                  <Card className="border-0 shadow-lg text-center">
+                <div 
+                  ref={benefitsRef}
+                  className={`grid md:grid-cols-3 gap-8 transition-all duration-1000 ${
+                    benefitsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                  }`}
+                >
+                  <Card className="border-0 shadow-lg text-center hover-lift hover-glow cursor-pointer group">
                     <CardContent className="p-8">
-                      <Target className="w-16 h-16 text-blue-600 mx-auto mb-6" />
-                      <h3 className="text-xl font-bold mb-4">85% Match Accuracy</h3>
+                      <Target className="w-16 h-16 text-blue-600 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" />
+                      <h3 className="text-xl font-bold mb-4 group-hover:text-blue-600 transition-colors duration-300">85% Match Accuracy</h3>
                       <p className="text-gray-600">Our AI-powered matching delivers candidates who succeed, not just interview well.</p>
                     </CardContent>
                   </Card>
-                  <Card className="border-0 shadow-lg text-center">
+                  <Card className="border-0 shadow-lg text-center hover-lift hover-glow cursor-pointer group">
                     <CardContent className="p-8">
-                      <Clock className="w-16 h-16 text-green-600 mx-auto mb-6" />
-                      <h3 className="text-xl font-bold mb-4">75% Faster Hiring</h3>
+                      <Clock className="w-16 h-16 text-green-600 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" />
+                      <h3 className="text-xl font-bold mb-4 group-hover:text-green-600 transition-colors duration-300">75% Faster Hiring</h3>
                       <p className="text-gray-600">Reduce time-to-hire from months to weeks with pre-vetted, startup-ready talent.</p>
                     </CardContent>
                   </Card>
-                  <Card className="border-0 shadow-lg text-center">
+                  <Card className="border-0 shadow-lg text-center hover-lift hover-glow cursor-pointer group">
                     <CardContent className="p-8">
-                      <TrendingUp className="w-16 h-16 text-purple-600 mx-auto mb-6" />
-                      <h3 className="text-xl font-bold mb-4">96% Retention Rate</h3>
+                      <TrendingUp className="w-16 h-16 text-purple-600 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300" />
+                      <h3 className="text-xl font-bold mb-4 group-hover:text-purple-600 transition-colors duration-300">96% Retention Rate</h3>
                       <p className="text-gray-600">Our candidates stick around and grow with your company for the long term.</p>
                     </CardContent>
                   </Card>
@@ -104,14 +121,19 @@ const PartnerProgram = () => {
             <div className="container mx-auto px-4">
               <div className="max-w-6xl mx-auto">
                 <h2 className="text-3xl font-bold text-center mb-12">Choose Your Partnership Level</h2>
-                <div className="grid md:grid-cols-3 gap-8">
+                <div 
+                  ref={tiersRef}
+                  className={`grid md:grid-cols-3 gap-8 transition-all duration-1000 ${
+                    tiersVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                  }`}
+                >
                   {partnerTiers.map((tier, index) => (
-                    <Card key={index} className={`border-0 shadow-lg ${index === 1 ? 'ring-2 ring-blue-500 scale-105' : ''}`}>
+                    <Card key={index} className={`border-0 shadow-lg hover-lift hover-glow cursor-pointer group ${index === 1 ? 'ring-2 ring-blue-500 scale-105' : ''}`}>
                       <CardContent className="p-8">
                         {index === 1 && (
                           <Badge className="mb-4 bg-blue-500 text-white">Most Popular</Badge>
                         )}
-                        <h3 className="text-2xl font-bold mb-2">{tier.tier}</h3>
+                        <h3 className="text-2xl font-bold mb-2 group-hover:text-blue-600 transition-colors duration-300">{tier.tier}</h3>
                         <div className="text-3xl font-bold text-blue-600 mb-4">{tier.investment}</div>
                         <p className="text-gray-600 mb-6">{tier.ideal}</p>
                         <ul className="space-y-3 mb-8">
@@ -122,7 +144,7 @@ const PartnerProgram = () => {
                             </li>
                           ))}
                         </ul>
-                        <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                        <Button className="w-full bg-blue-600 hover:bg-blue-700 hover:scale-105 transition-all duration-300">
                           Get Started
                         </Button>
                       </CardContent>
@@ -138,13 +160,18 @@ const PartnerProgram = () => {
             <div className="container mx-auto px-4">
               <div className="max-w-4xl mx-auto text-center">
                 <h2 className="text-3xl font-bold mb-12">Partner Success Stories</h2>
-                <div className="space-y-8">
-                  <Card className="border-0 shadow-lg">
+                <div 
+                  ref={successRef}
+                  className={`space-y-8 transition-all duration-1000 ${
+                    successVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                  }`}
+                >
+                  <Card className="border-0 shadow-lg hover-lift hover-glow cursor-pointer group">
                     <CardContent className="p-8">
                       <div className="flex items-center gap-4 mb-4">
-                        <Handshake className="w-12 h-12 text-blue-600" />
+                        <Handshake className="w-12 h-12 text-blue-600 group-hover:scale-110 transition-transform duration-300" />
                         <div>
-                          <h3 className="font-bold text-lg">TechFlow AI</h3>
+                          <h3 className="font-bold text-lg group-hover:text-blue-600 transition-colors duration-300">TechFlow AI</h3>
                           <p className="text-gray-600">Y Combinator S23</p>
                         </div>
                       </div>
@@ -176,12 +203,12 @@ const PartnerProgram = () => {
           {/* CTA */}
           <section className="py-20 bg-gradient-to-r from-blue-600 to-purple-600 text-white">
             <div className="container mx-auto px-4 text-center">
-              <Award className="w-16 h-16 mx-auto mb-6" />
+              <Award className="w-16 h-16 mx-auto mb-6 hover:scale-110 transition-transform duration-300" />
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Hiring?</h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
                 Join 500+ companies who've revolutionized their talent acquisition with ResuHire.
               </p>
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 hover:scale-105 transition-all duration-300">
                 Become a Partner
               </Button>
             </div>
