@@ -1,207 +1,264 @@
-
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Zap, Target, BookOpen, Users, Brain, Trophy, Rocket, Shield, TrendingUp, Award, Clock, Heart, Mic, Camera, Building2, Globe, GitBranch, Lightbulb, DollarSign, BarChart3, Briefcase } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-import { Brain, Target, Zap, Shield, Rocket, Users, Trophy, Star, TrendingUp, CheckCircle, Globe, Cpu } from 'lucide-react';
-import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const Features = () => {
-  const { elementRef: featuresRef, isVisible: featuresVisible } = useScrollAnimation();
-  const { elementRef: aiRef, isVisible: aiVisible } = useScrollAnimation();
-
-  const powerFeatures = [
+  const features = [
     {
       icon: Brain,
-      title: "Hirexus AI Engine",
-      description: "Proprietary intelligence that analyzes 200+ data points for unprecedented 85% match accuracy",
-      gradient: "from-cyan-500 to-blue-600",
-      stats: "85% Accuracy",
-      highlight: "Advanced Neural Networks"
-    },
-    {
-      icon: Rocket,
-      title: "Career Acceleration Matrix",
-      description: "Systematic transformation pipeline that compresses 4-year career development into 12 intensive weeks",
-      gradient: "from-purple-500 to-pink-600",
-      stats: "12 Weeks",
-      highlight: "4x Faster Development"
-    },
-    {
-      icon: Shield,
-      title: "Enterprise-Grade Validation",
-      description: "Rigorous assessment protocols ensuring only top-tier talent enters our exclusive pipeline",
-      gradient: "from-green-500 to-emerald-600",
-      stats: "15% Accept Rate",
-      highlight: "Elite Standards"
-    },
-    {
-      icon: Target,
-      title: "Precision Placement Engine",
-      description: "Direct integration with 500+ elite companies for guaranteed placement outcomes",
-      gradient: "from-orange-500 to-red-600",
-      stats: "98% Success",
-      highlight: "Guaranteed Outcomes"
-    },
-    {
-      icon: Globe,
-      title: "Global Talent Network",
-      description: "Worldwide ecosystem connecting exceptional talent with visionary companies across continents",
-      gradient: "from-indigo-500 to-purple-600",
-      stats: "50+ Countries",
-      highlight: "Global Reach"
+      title: "AI-Powered Matching",
+      description: "Our advanced AI analyzes skills, personality, and potential to create 85% accurate matches. No more spray-and-pray applications.",
+      badge: "AI-Driven",
+      color: "from-purple-500 to-pink-500"
     },
     {
       icon: Trophy,
-      title: "Executive Alumni Network",
-      description: "Exclusive access to industry leaders, C-suite executives, and successful entrepreneurs",
-      gradient: "from-yellow-500 to-orange-600",
-      stats: "25K+ Alumni",
-      highlight: "Elite Network"
+      title: "FAANG Guarantees",
+      description: "Direct partnerships with Meta, Google, Amazon, Apple & Netflix. Get internships from your first year of college with our guarantee.",
+      badge: "Exclusive",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      icon: BookOpen,
+      title: "Warrior Academy",
+      description: "Comprehensive training ecosystem: technical skills, soft skills, mental coaching, body language, and interview mastery.",
+      badge: "Complete",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      icon: Camera,
+      title: "Body Language Mastery",
+      description: "AI-powered video analysis to perfect your posture, gestures, and presence. Learn to command any room with confidence.",
+      badge: "Revolutionary",
+      color: "from-rose-500 to-pink-500"
+    },
+    {
+      icon: Heart,
+      title: "Mental Fortress Training",
+      description: "Combat interview anxiety, imposter syndrome, and stress. Build unshakeable confidence through psychological coaching.",
+      badge: "Wellness",
+      color: "from-red-500 to-orange-500"
+    },
+    {
+      icon: Mic,
+      title: "Voice & Communication Coaching",
+      description: "Perfect your articulation, tone, and delivery. Transform how you present ideas and handle difficult questions.",
+      badge: "Transformative",
+      color: "from-indigo-500 to-purple-500"
+    },
+    {
+      icon: Rocket,
+      title: "Startup Fast-Track",
+      description: "Connect with innovative startups. Youth-to-youth hiring with no corporate bureaucracy. Move fast, break barriers.",
+      badge: "Innovation",
+      color: "from-orange-500 to-red-500"
+    },
+    {
+      icon: Target,
+      title: "No Resume Revolution",
+      description: "Three simple questions: Who are you? What do you know? How do you do it? That's it. Skills over paperwork.",
+      badge: "Revolutionary",
+      color: "from-indigo-500 to-purple-500"
+    },
+    {
+      icon: Shield,
+      title: "Referral Guarantee",
+      description: "Master the skills, and we become your referral. We break traditional hiring barriers and get you inside.",
+      badge: "Guaranteed",
+      color: "from-teal-500 to-blue-500"
+    },
+    {
+      icon: Building2,
+      title: "Enterprise Integration",
+      description: "Seamless ATS integration, custom workflows, and white-label solutions for Fortune 500 companies.",
+      badge: "Enterprise",
+      color: "from-slate-500 to-gray-600"
+    },
+    {
+      icon: Globe,
+      title: "Global Talent Pool",
+      description: "Access opportunities worldwide. Our platform connects talent across continents with real-time matching.",
+      badge: "Global",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      icon: GitBranch,
+      title: "Real-Time Skill Tracking",
+      description: "Dynamic skill assessment that evolves with you. Track progress, identify gaps, and get personalized improvement plans.",
+      badge: "Adaptive",
+      color: "from-green-500 to-teal-500"
+    },
+    {
+      icon: Lightbulb,
+      title: "Innovation Hackathons",
+      description: "Monthly hackathons with FAANG engineers as judges. Build real products, win internships, and showcase talent.",
+      badge: "Creative",
+      color: "from-yellow-500 to-orange-500"
+    },
+    {
+      icon: TrendingUp,
+      title: "Career Acceleration",
+      description: "From student to professional in record time. Our warriors land roles 500% faster than traditional job seekers.",
+      badge: "Fast-Track",
+      color: "from-pink-500 to-rose-500"
+    },
+    {
+      icon: Award,
+      title: "Merit-Based Placement",
+      description: "Your skills determine your placement, not your network or background. True meritocracy in action.",
+      badge: "Fair",
+      color: "from-cyan-500 to-blue-500"
+    },
+    {
+      icon: Clock,
+      title: "Real-Time Matching",
+      description: "Get matched with opportunities as they arise. No waiting for application reviews - instant connections.",
+      badge: "Instant",
+      color: "from-yellow-500 to-orange-500"
+    },
+    {
+      icon: Users,
+      title: "Peer Learning Pods",
+      description: "Small cohort groups for intensive learning. Study together, solve problems together, get hired together.",
+      badge: "Community",
+      color: "from-violet-500 to-purple-500"
+    },
+    {
+      icon: Zap,
+      title: "Continuous Evolution",
+      description: "We adapt to market changes in real-time. Our platform evolves with industry needs to keep you always relevant.",
+      badge: "Adaptive",
+      color: "from-emerald-500 to-green-500"
     }
   ];
 
-  const aiCapabilities = [
+  const uniqueValueProps = [
     {
-      title: "Deep Learning Assessment",
-      desc: "Neural networks analyze coding patterns, problem-solving approaches, and learning velocity",
-      accuracy: "94%"
+      title: "Only Platform with FAANG Internship Guarantees",
+      description: "Direct partnerships ensuring placement from year 1 of college"
     },
     {
-      title: "Cultural Compatibility Analysis",
-      desc: "Advanced psychometric profiling for perfect team and company culture alignment",
-      accuracy: "91%"
+      title: "Complete Human Transformation",
+      description: "Technical + Soft + Mental + Physical presence coaching"
     },
     {
-      title: "Growth Trajectory Prediction",
-      desc: "Predictive modeling to forecast candidate potential and career advancement paths",
-      accuracy: "87%"
+      title: "AI-First Hiring Revolution",
+      description: "85% match accuracy vs traditional 15-20% resume success"
     },
     {
-      title: "Real-time Skill Evolution",
-      desc: "Dynamic profiling that adapts as candidates complete challenges and gain experience",
-      accuracy: "96%"
+      title: "End-to-End Ecosystem",
+      description: "From skill gap identification to job placement in one platform"
+    }
+  ];
+
+  const marketOpportunity = [
+    {
+      icon: DollarSign,
+      value: "$200B+",
+      label: "Global Recruitment Market",
+      description: "Total addressable market across hiring and training"
+    },
+    {
+      icon: BarChart3,
+      value: "$50B+",
+      label: "EdTech Market Share",
+      description: "Corporate training and skill development segment"
+    },
+    {
+      icon: Briefcase,
+      value: "$150B+",
+      label: "HrTech Market Share",
+      description: "Recruitment technology and talent acquisition"
     }
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-slate-50 to-white relative overflow-hidden">
+    <section id="features" className="py-20 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute inset-0 opacity-5">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500"></div>
-      </div>
-
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/10 to-background"></div>
+      
       <div className="container mx-auto px-4 relative z-10">
-        <div 
-          ref={featuresRef}
-          className={`text-center mb-20 transition-all duration-1000 ${
-            featuresVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
-        >
-          <Badge className="mb-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 text-lg font-bold">
-            🚀 Revolutionary Technology Stack
+        <div className="text-center mb-16">
+          <Badge className="mb-4 bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700">
+            🔥 World's Most Comprehensive Platform
           </Badge>
-          <h2 className="text-5xl md:text-7xl font-black mb-8 tracking-tight">
-            <span className="bg-gradient-to-r from-slate-900 via-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Platform
-            </span>
-            <br />
-            <span className="text-slate-700">Capabilities</span>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6">
+            Why ResuHire is <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Unprecedented</span>
           </h2>
-          <p className="text-2xl text-gray-600 max-w-5xl mx-auto font-light leading-relaxed">
-            Experience the world's most advanced career acceleration technology. Built at the intersection of 
-            <span className="font-semibold text-blue-600"> HRTech</span>, 
-            <span className="font-semibold text-purple-600"> EdTech</span>, and 
-            <span className="font-semibold text-pink-600"> Advanced AI</span>.
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-8">
+            The world's first platform that seamlessly integrates HRTech + EdTech + AI with FAANG access, 
+            mental preparation, and holistic human development. No other platform offers this complete transformation.
           </p>
+
+          {/* Market Opportunity Section */}
+          <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-8 mb-12 border border-green-200">
+            <h3 className="text-2xl font-bold text-green-800 mb-6">$200B Market Opportunity</h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              {marketOpportunity.map((market, index) => (
+                <div key={index} className="text-center">
+                  <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <market.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="text-3xl font-bold text-green-800 mb-2">{market.value}</div>
+                  <div className="font-semibold text-green-700 mb-2">{market.label}</div>
+                  <div className="text-sm text-green-600">{market.description}</div>
+                </div>
+              ))}
+            </div>
+            <p className="text-green-700 mt-6 font-medium">
+              ResuHire is positioned at the intersection of the fastest-growing segments in both markets
+            </p>
+          </div>
+
+          {/* Unique Value Props */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
+            {uniqueValueProps.map((prop, index) => (
+              <div key={index} className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-lg p-4 border border-purple-200">
+                <h3 className="font-bold text-sm text-purple-700 mb-2">{prop.title}</h3>
+                <p className="text-xs text-purple-600">{prop.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
-          {powerFeatures.map((feature, index) => (
-            <Card key={index} className={`border-0 shadow-2xl hover:shadow-3xl transition-all duration-500 group overflow-hidden hover:scale-105 ${
-              featuresVisible ? `animate-fade-in delay-${index * 100}` : 'opacity-0'
-            }`}>
-              <CardHeader className="text-center pb-4">
-                <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r ${feature.gradient} flex items-center justify-center mx-auto mb-6 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-lg`}>
-                  <feature.icon className="w-10 h-10 text-white" />
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          {features.map((feature, index) => (
+            <Card key={index} className="border-0 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden group hover:scale-105">
+              <CardHeader className="relative pb-4">
+                <div className={`w-14 h-14 rounded-xl bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                  <feature.icon className="w-7 h-7 text-white" />
                 </div>
-                <CardTitle className="text-2xl font-bold mb-2">{feature.title}</CardTitle>
-                <div className="flex justify-center gap-2 mb-4">
-                  <Badge variant="secondary" className="bg-blue-50 text-blue-700 font-semibold">
-                    {feature.stats}
-                  </Badge>
-                  <Badge variant="outline" className="border-purple-300 text-purple-600">
-                    {feature.highlight}
-                  </Badge>
-                </div>
+                <Badge variant="secondary" className="absolute top-6 right-6 text-xs font-bold">
+                  {feature.badge}
+                </Badge>
+                <CardTitle className="text-xl font-bold leading-tight">{feature.title}</CardTitle>
               </CardHeader>
-              <CardContent className="text-center">
-                <p className="text-gray-600 leading-relaxed text-lg">{feature.description}</p>
+              <CardContent className="pt-0">
+                <p className="text-muted-foreground leading-relaxed">
+                  {feature.description}
+                </p>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        {/* AI Capabilities Section */}
-        <div 
-          ref={aiRef}
-          className={`bg-gradient-to-r from-slate-900 via-blue-900 to-purple-900 rounded-3xl p-12 text-white mb-20 transition-all duration-1000 ${
-            aiVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
-        >
-          <div className="text-center mb-12">
-            <div className="flex items-center justify-center gap-3 mb-6">
-              <Cpu className="w-12 h-12 text-cyan-400" />
-              <h3 className="text-4xl font-black">Hirexus AI Capabilities</h3>
-            </div>
-            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-              Our proprietary AI engine represents the pinnacle of talent assessment technology, 
-              delivering insights that traditional methods simply cannot achieve.
+        {/* Call to Action */}
+        <div className="text-center mt-16">
+          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 max-w-4xl mx-auto text-white">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              Ready to Experience the Most Complete Career Platform Ever Built?
+            </h3>
+            <p className="text-lg opacity-90 mb-6">
+              Join thousands of warriors who've transformed their entire professional presence
             </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {aiCapabilities.map((capability, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-6 hover:bg-white/20 transition-all duration-300">
-                <div className="flex items-center justify-between mb-4">
-                  <h4 className="text-xl font-bold">{capability.title}</h4>
-                  <div className="flex items-center gap-2">
-                    <div className="text-2xl font-black text-green-400">{capability.accuracy}</div>
-                    <TrendingUp className="w-5 h-5 text-green-400" />
-                  </div>
-                </div>
-                <p className="text-gray-300 leading-relaxed">{capability.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="text-center mt-12">
-            <div className="inline-flex items-center gap-4 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full px-8 py-4 backdrop-blur-sm border border-cyan-400/30">
-              <Star className="w-6 h-6 text-yellow-400 fill-current" />
-              <span className="text-xl font-bold">Industry-Leading 85% Match Accuracy</span>
-              <CheckCircle className="w-6 h-6 text-green-400" />
-            </div>
-          </div>
-        </div>
-
-        {/* Power Statistics */}
-        <div className="text-center">
-          <h3 className="text-3xl font-bold mb-8 text-gray-900">Platform Performance Metrics</h3>
-          <div className="grid md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <div className="group hover:scale-110 transition-transform duration-300">
-              <div className="text-4xl font-black bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent mb-2">500%</div>
-              <div className="text-gray-600 font-semibold">Faster Hiring</div>
-            </div>
-            <div className="group hover:scale-110 transition-transform duration-300">
-              <div className="text-4xl font-black bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent mb-2">$2M+</div>
-              <div className="text-gray-600 font-semibold">Cost Savings</div>
-            </div>
-            <div className="group hover:scale-110 transition-transform duration-300">
-              <div className="text-4xl font-black bg-gradient-to-r from-green-600 to-emerald-500 bg-clip-text text-transparent mb-2">200+</div>
-              <div className="text-gray-600 font-semibold">Data Points</div>
-            </div>
-            <div className="group hover:scale-110 transition-transform duration-300">
-              <div className="text-4xl font-black bg-gradient-to-r from-orange-600 to-red-500 bg-clip-text text-transparent mb-2">24/7</div>
-              <div className="text-gray-600 font-semibold">AI Processing</div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">
+                Start Your Complete Transformation
+              </button>
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-purple-600 transition-colors">
+                See Full Feature Demo
+              </button>
             </div>
           </div>
         </div>
