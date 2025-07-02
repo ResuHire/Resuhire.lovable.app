@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Zap, Target, BookOpen, Users, Brain, Trophy, Rocket, Shield, TrendingUp, Award, Clock, Heart, Mic, Camera, Building2, Globe, GitBranch, Lightbulb, DollarSign, BarChart3, Briefcase } from 'lucide-react';
@@ -7,148 +8,148 @@ const Features = () => {
   const features = [
     {
       icon: Brain,
-      title: "AI-Powered Matching",
-      description: "Our advanced AI analyzes skills, personality, and potential to create 85% accurate matches. No more spray-and-pray applications.",
-      badge: "AI-Driven",
+      title: "Advanced AI Matching",
+      description: "Proprietary algorithms analyze comprehensive skill profiles and career trajectories to create precise candidate-employer matches with 85% accuracy.",
+      badge: "AI-Powered",
       color: "from-purple-500 to-pink-500"
     },
     {
       icon: Trophy,
-      title: "FAANG Guarantees",
-      description: "Direct partnerships with Meta, Google, Amazon, Apple & Netflix. Get internships from your first year of college with our guarantee.",
-      badge: "Exclusive",
+      title: "Elite Industry Partnerships",
+      description: "Exclusive partnerships with leading technology companies including Meta, Google, Amazon, and Apple for guaranteed placement opportunities.",
+      badge: "Premium Access",
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: BookOpen,
-      title: "Warrior Academy",
-      description: "Comprehensive training ecosystem: technical skills, soft skills, mental coaching, body language, and interview mastery.",
-      badge: "Complete",
+      title: "Comprehensive Development Program",
+      description: "Integrated learning ecosystem combining technical excellence, leadership development, professional communication, and industry best practices.",
+      badge: "Complete Solution",
       color: "from-green-500 to-emerald-500"
     },
     {
       icon: Camera,
-      title: "Body Language Mastery",
-      description: "AI-powered video analysis to perfect your posture, gestures, and presence. Learn to command any room with confidence.",
-      badge: "Revolutionary",
+      title: "Professional Presence Training",
+      description: "Advanced coaching in executive presence, professional communication, and leadership skills through AI-powered assessment and feedback.",
+      badge: "Executive Training",
       color: "from-rose-500 to-pink-500"
     },
     {
       icon: Heart,
-      title: "Mental Fortress Training",
-      description: "Combat interview anxiety, imposter syndrome, and stress. Build unshakeable confidence through psychological coaching.",
-      badge: "Wellness",
+      title: "Leadership Development",
+      description: "Comprehensive leadership training focused on emotional intelligence, strategic thinking, and high-performance team management.",
+      badge: "Leadership Focus",
       color: "from-red-500 to-orange-500"
     },
     {
       icon: Mic,
-      title: "Voice & Communication Coaching",
-      description: "Perfect your articulation, tone, and delivery. Transform how you present ideas and handle difficult questions.",
-      badge: "Transformative",
+      title: "Executive Communication",
+      description: "Professional communication training including public speaking, stakeholder management, and persuasive presentation skills.",
+      badge: "Communication Mastery",
       color: "from-indigo-500 to-purple-500"
     },
     {
       icon: Rocket,
-      title: "Startup Fast-Track",
-      description: "Connect with innovative startups. Youth-to-youth hiring with no corporate bureaucracy. Move fast, break barriers.",
-      badge: "Innovation",
+      title: "Innovation Ecosystem",
+      description: "Direct connection to high-growth startups and emerging technology companies seeking exceptional talent and fresh perspectives.",
+      badge: "Innovation Network",
       color: "from-orange-500 to-red-500"
     },
     {
       icon: Target,
-      title: "No Resume Revolution",
-      description: "Three simple questions: Who are you? What do you know? How do you do it? That's it. Skills over paperwork.",
-      badge: "Revolutionary",
+      title: "Skills-Based Assessment",
+      description: "Revolutionary evaluation methodology that prioritizes demonstrated capabilities and potential over traditional credentials.",
+      badge: "Skills-First",
       color: "from-indigo-500 to-purple-500"
     },
     {
       icon: Shield,
-      title: "Referral Guarantee",
-      description: "Master the skills, and we become your referral. We break traditional hiring barriers and get you inside.",
-      badge: "Guaranteed",
+      title: "Career Guarantee Program",
+      description: "Comprehensive support system ensuring successful career placement with ongoing mentorship and professional development.",
+      badge: "Success Guarantee",
       color: "from-teal-500 to-blue-500"
     },
     {
       icon: Building2,
       title: "Enterprise Integration",
-      description: "Seamless ATS integration, custom workflows, and white-label solutions for Fortune 500 companies.",
-      badge: "Enterprise",
+      description: "Seamless integration with enterprise systems, custom workflows, and white-label solutions for Fortune 500 organizations.",
+      badge: "Enterprise Ready",
       color: "from-slate-500 to-gray-600"
     },
     {
       icon: Globe,
-      title: "Global Talent Pool",
-      description: "Access opportunities worldwide. Our platform connects talent across continents with real-time matching.",
-      badge: "Global",
+      title: "Global Talent Network",
+      description: "International talent ecosystem connecting exceptional professionals with opportunities across multiple markets and industries.",
+      badge: "Global Reach",
       color: "from-blue-500 to-cyan-500"
     },
     {
       icon: GitBranch,
-      title: "Real-Time Skill Tracking",
-      description: "Dynamic skill assessment that evolves with you. Track progress, identify gaps, and get personalized improvement plans.",
-      badge: "Adaptive",
+      title: "Dynamic Skill Tracking",
+      description: "Real-time competency assessment and development tracking with personalized growth recommendations and career pathway optimization.",
+      badge: "Adaptive Learning",
       color: "from-green-500 to-teal-500"
     },
     {
       icon: Lightbulb,
-      title: "Innovation Hackathons",
-      description: "Monthly hackathons with FAANG engineers as judges. Build real products, win internships, and showcase talent.",
-      badge: "Creative",
+      title: "Innovation Challenges",
+      description: "Regular innovation competitions and hackathons with industry leaders, providing real-world project experience and networking opportunities.",
+      badge: "Innovation Labs",
       color: "from-yellow-500 to-orange-500"
     },
     {
       icon: TrendingUp,
-      title: "Career Acceleration",
-      description: "From student to professional in record time. Our warriors land roles 500% faster than traditional job seekers.",
-      badge: "Fast-Track",
+      title: "Accelerated Career Growth",
+      description: "Systematic approach to career advancement resulting in significantly faster professional development and industry recognition.",
+      badge: "Fast-Track Success",
       color: "from-pink-500 to-rose-500"
     },
     {
       icon: Award,
       title: "Merit-Based Placement",
-      description: "Your skills determine your placement, not your network or background. True meritocracy in action.",
-      badge: "Fair",
+      description: "Transparent, merit-driven selection process ensuring equal opportunity based on demonstrated skills and potential for growth.",
+      badge: "Equal Opportunity",
       color: "from-cyan-500 to-blue-500"
     },
     {
       icon: Clock,
-      title: "Real-Time Matching",
-      description: "Get matched with opportunities as they arise. No waiting for application reviews - instant connections.",
-      badge: "Instant",
+      title: "Real-Time Opportunity Matching",
+      description: "Instantaneous matching with emerging opportunities based on current market demands and individual career objectives.",
+      badge: "Instant Connection",
       color: "from-yellow-500 to-orange-500"
     },
     {
       icon: Users,
-      title: "Peer Learning Pods",
-      description: "Small cohort groups for intensive learning. Study together, solve problems together, get hired together.",
-      badge: "Community",
+      title: "Professional Learning Communities",
+      description: "Curated peer groups and mentorship networks facilitating collaborative learning and professional relationship building.",
+      badge: "Community Network",
       color: "from-violet-500 to-purple-500"
     },
     {
       icon: Zap,
-      title: "Continuous Evolution",
-      description: "We adapt to market changes in real-time. Our platform evolves with industry needs to keep you always relevant.",
-      badge: "Adaptive",
+      title: "Continuous Innovation",
+      description: "Platform continuously evolves with industry trends and technological advances to maintain competitive advantage for users.",
+      badge: "Future-Ready",
       color: "from-emerald-500 to-green-500"
     }
   ];
 
   const uniqueValueProps = [
     {
-      title: "Only Platform with FAANG Internship Guarantees",
-      description: "Direct partnerships ensuring placement from year 1 of college"
+      title: "Exclusive Industry Partnership Network",
+      description: "Direct placement pipelines with leading technology companies"
     },
     {
-      title: "Complete Human Transformation",
-      description: "Technical + Soft + Mental + Physical presence coaching"
+      title: "Comprehensive Professional Development",
+      description: "Technical expertise combined with leadership and communication skills"
     },
     {
-      title: "AI-First Hiring Revolution",
-      description: "85% match accuracy vs traditional 15-20% resume success"
+      title: "AI-Driven Precision Matching",
+      description: "85% accuracy versus traditional 15-20% resume-based success rates"
     },
     {
-      title: "End-to-End Ecosystem",
-      description: "From skill gap identification to job placement in one platform"
+      title: "Integrated Career Operating System",
+      description: "Complete solution from skill development to career placement"
     }
   ];
 
@@ -157,41 +158,39 @@ const Features = () => {
       icon: DollarSign,
       value: "$200B+",
       label: "Global Recruitment Market",
-      description: "Total addressable market across hiring and training"
+      description: "Total addressable market across hiring and professional development"
     },
     {
       icon: BarChart3,
       value: "$50B+",
-      label: "EdTech Market Share",
-      description: "Corporate training and skill development segment"
+      label: "Professional Development Market",
+      description: "Corporate training and executive development segment"
     },
     {
       icon: Briefcase,
       value: "$150B+",
-      label: "HrTech Market Share",
-      description: "Recruitment technology and talent acquisition"
+      label: "HR Technology Market",
+      description: "Recruitment technology and talent management solutions"
     }
   ];
 
   return (
     <section id="features" className="py-20 relative overflow-hidden">
-      {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-background via-muted/10 to-background"></div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <Badge className="mb-4 bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700">
-            🔥 World's Most Comprehensive Platform
+          <Badge className="mb-4 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-700 border-blue-200">
+            🚀 Comprehensive Career Platform
           </Badge>
           <h2 className="text-4xl md:text-6xl font-bold mb-6">
-            Why ResuHire is <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Unprecedented</span>
+            Professional Excellence <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Redefined</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-8">
-            The world's first platform that seamlessly integrates HRTech + EdTech + AI with FAANG access, 
-            mental preparation, and holistic human development. No other platform offers this complete transformation.
+            The world's first integrated platform combining advanced HR technology, comprehensive education, 
+            and AI-powered matching to transform career development and professional achievement.
           </p>
 
-          {/* Market Opportunity Section */}
           <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-2xl p-8 mb-12 border border-green-200">
             <h3 className="text-2xl font-bold text-green-800 mb-6">$200B Market Opportunity</h3>
             <div className="grid md:grid-cols-3 gap-6">
@@ -207,16 +206,15 @@ const Features = () => {
               ))}
             </div>
             <p className="text-green-700 mt-6 font-medium">
-              ResuHire is positioned at the intersection of the fastest-growing segments in both markets
+              ResuHire operates at the intersection of the fastest-growing technology and professional development markets
             </p>
           </div>
 
-          {/* Unique Value Props */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-12">
             {uniqueValueProps.map((prop, index) => (
-              <div key={index} className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-lg p-4 border border-purple-200">
-                <h3 className="font-bold text-sm text-purple-700 mb-2">{prop.title}</h3>
-                <p className="text-xs text-purple-600">{prop.description}</p>
+              <div key={index} className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-4 border border-blue-200">
+                <h3 className="font-bold text-sm text-blue-700 mb-2">{prop.title}</h3>
+                <p className="text-xs text-blue-600">{prop.description}</p>
               </div>
             ))}
           </div>
@@ -224,9 +222,9 @@ const Features = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {features.map((feature, index) => (
-            <Card key={index} className="border-0 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden group hover:scale-105">
+            <Card key={index} className="border-0 shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden group">
               <CardHeader className="relative pb-4">
-                <div className={`w-14 h-14 rounded-xl bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`w-14 h-14 rounded-xl bg-gradient-to-r ${feature.color} flex items-center justify-center mb-4`}>
                   <feature.icon className="w-7 h-7 text-white" />
                 </div>
                 <Badge variant="secondary" className="absolute top-6 right-6 text-xs font-bold">
@@ -243,21 +241,20 @@ const Features = () => {
           ))}
         </div>
 
-        {/* Call to Action */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl p-8 max-w-4xl mx-auto text-white">
+          <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 max-w-4xl mx-auto text-white">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              Ready to Experience the Most Complete Career Platform Ever Built?
+              Experience the Future of Professional Development
             </h3>
             <p className="text-lg opacity-90 mb-6">
-              Join thousands of warriors who've transformed their entire professional presence
+              Join thousands of professionals who have transformed their careers through our comprehensive platform
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-purple-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">
-                Start Your Complete Transformation
+              <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition-colors">
+                Begin Your Professional Journey
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-purple-600 transition-colors">
-                See Full Feature Demo
+              <button className="border border-white text-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-blue-600 transition-colors">
+                Explore Platform Features
               </button>
             </div>
           </div>
