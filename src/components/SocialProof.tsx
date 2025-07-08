@@ -13,10 +13,10 @@ const SocialProof = () => {
   ];
 
   const metrics = [
-    { icon: Users, value: "25K+", label: "Active Members" },
-    { icon: Building, value: "500+", label: "Partner Companies" },
-    { icon: Award, value: "$2.5M", label: "Seed Funding" },
-    { icon: TrendingUp, value: "98%", label: "Success Rate" }
+    { icon: Users, value: "25K+", label: "Warriors in Pipeline" },
+    { icon: Building, value: "500+", label: "Target Partners" },
+    { icon: Award, value: "$2.5M", label: "Seeking Seed Round" },
+    { icon: TrendingUp, value: "98%", label: "Projected Success" }
   ];
 
   return (
@@ -37,7 +37,7 @@ const SocialProof = () => {
 
         {/* Partner Companies */}
         <div className="text-center mb-12">
-          <h3 className="text-lg font-bold text-gray-900 mb-6">Trusted by leading companies</h3>
+          <h3 className="text-lg font-bold text-gray-900 mb-6">Future partners we're targeting</h3>
           <div className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center opacity-60">
             {companies.map((company, index) => (
               <div key={index} className="text-lg font-semibold text-gray-700">{company}</div>
@@ -47,7 +47,7 @@ const SocialProof = () => {
 
         {/* Universities */}
         <div className="text-center">
-          <h3 className="text-lg font-bold text-gray-900 mb-6">Alumni from top institutions</h3>
+          <h3 className="text-lg font-bold text-gray-900 mb-6">Targeting alumni from top institutions</h3>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60">
             {universities.map((university, index) => (
               <div key={index} className="text-lg font-semibold text-gray-700">{university}</div>

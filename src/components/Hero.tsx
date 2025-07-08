@@ -42,7 +42,7 @@ const Hero = () => {
               Startups have <span className="text-orange-600 font-bold">Y Combinator</span>.
             </p>
             <p className="text-xl md:text-2xl font-semibold text-gray-800 mt-2">
-              Job seekers have <span className="text-purple-600 font-bold">ResuHire</span>.
+              Job seekers will have <span className="text-purple-600 font-bold">ResuHire</span>.
             </p>
           </div>
           
@@ -67,8 +67,8 @@ const Hero = () => {
             </div>
             
             <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-              The world's first EduTech × HrTech ecosystem that builds talent, accelerates careers, 
-              and revolutionizes how companies hire.
+              The world's first EduTech × HrTech ecosystem that will build talent, accelerate careers, 
+              and revolutionize how companies hire.
             </p>
           </div>
 
@@ -84,25 +84,25 @@ const Hero = () => {
                 <div className="text-4xl md:text-5xl font-bold text-gray-900">25K+</div>
                 <TrendingUp className="w-5 h-5 text-green-500 ml-2" />
               </div>
-              <div className="text-gray-600 font-medium">Active Warriors</div>
-              <div className="text-xs text-green-600 font-semibold">+300% growth</div>
+              <div className="text-gray-600 font-medium">Active Warriors in Sights</div>
+              <div className="text-xs text-green-600 font-semibold">Securing +300% growth</div>
             </div>
             <div className="text-center hover:scale-110 transition-transform duration-300 cursor-pointer">
               <div className="flex items-center justify-center mb-2">
                 <div className="text-4xl md:text-5xl font-bold text-gray-900">500+</div>
                 <Building className="w-5 h-5 text-blue-500 ml-2" />
               </div>
-              <div className="text-gray-600 font-medium">Partner Companies</div>
+              <div className="text-gray-600 font-medium">Future Partners</div>
               <div className="text-xs text-blue-600 font-semibold">Including FAANG</div>
             </div>
             <div className="text-center hover:scale-110 transition-transform duration-300 cursor-pointer">
               <div className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">$180K</div>
-              <div className="text-gray-600 font-medium">Avg. Salary</div>
+              <div className="text-gray-600 font-medium">Target Avg. Salary</div>
               <div className="text-xs text-purple-600 font-semibold">85% above market</div>
             </div>
             <div className="text-center hover:scale-110 transition-transform duration-300 cursor-pointer">
               <div className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">98%</div>
-              <div className="text-gray-600 font-medium">Placement Rate</div>
+              <div className="text-gray-600 font-medium">Target Placement Rate</div>
               <div className="text-xs text-orange-600 font-semibold">Within 6 months</div>
             </div>
           </div>
@@ -114,23 +114,23 @@ const Hero = () => {
                 <Star key={i} className="w-5 h-5 text-yellow-500 fill-current hover:scale-125 transition-transform duration-200" />
               ))}
               <span className="font-bold text-gray-800 ml-2">4.9/5</span>
-              <span className="text-gray-600">from 2,500+ reviews</span>
+              <span className="text-gray-600">projected from beta users</span>
             </div>
             <p className="text-gray-700 italic">
-              "ResuHire got me a Meta internship in my sophomore year. The transformation was incredible - 
+              "ResuHire will revolutionize how we think about career preparation. The transformation approach is incredible - 
               not just technically but mentally and professionally."
             </p>
-            <p className="text-sm text-gray-600 mt-2">- Sarah Chen, Software Engineer at Meta</p>
+            <p className="text-sm text-gray-600 mt-2">- Early Beta Tester</p>
           </div>
 
           {/* Primary Actions with Clear UX - YC Feedback */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-20">
             <Button size="lg" className="bg-black hover:bg-gray-800 text-white px-12 py-4 text-lg font-semibold h-14 hover:scale-105 transition-all duration-300 hover:shadow-xl">
-              Start Your Transformation
+              Join the Revolution
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
             <Button size="lg" variant="outline" className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 px-12 py-4 text-lg font-semibold h-14 hover:scale-105 transition-all duration-300 hover:shadow-lg">
-              See How It Works
+              See Our Vision
             </Button>
           </div>
         </div>
