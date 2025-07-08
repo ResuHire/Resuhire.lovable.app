@@ -7,56 +7,56 @@ const Stats = () => {
     {
       icon: Users,
       number: "25K+",
-      label: "Warriors Trained",
+      label: "Warriors in Pipeline",
       color: "text-purple-600",
       bgColor: "bg-purple-100"
     },
     {
       icon: Briefcase,
       number: "12K+",
-      label: "Jobs Placed",
+      label: "Target Job Placements",
       color: "text-blue-600",
       bgColor: "bg-blue-100"
     },
     {
       icon: GraduationCap,
       number: "2,500+",
-      label: "FAANG Placements",
+      label: "Projected FAANG Placements",
       color: "text-indigo-600",
       bgColor: "bg-indigo-100"
     },
     {
       icon: TrendingUp,
       number: "85%",
-      label: "Match Success",
+      label: "Target Match Success",
       color: "text-green-600",
       bgColor: "bg-green-100"
     },
     {
       icon: Award,
-      number: "45",
-      label: "Partner Companies",
+      number: "45+",
+      label: "Target Partner Companies",
       color: "text-orange-600",
       bgColor: "bg-orange-100"
     },
     {
       icon: DollarSign,
       number: "$150K",
-      label: "Avg Starting Salary",
+      label: "Target Starting Salary",
       color: "text-emerald-600",
       bgColor: "bg-emerald-100"
     },
     {
       icon: Target,
       number: "3 Days",
-      label: "Avg Placement Time",
+      label: "Target Placement Time",
       color: "text-pink-600",
       bgColor: "bg-pink-100"
     },
     {
       icon: Zap,
       number: "95%",
-      label: "Satisfaction Rate",
+      label: "Projected Satisfaction",
       color: "text-cyan-600",
       bgColor: "bg-cyan-100"
     }
@@ -74,10 +74,10 @@ const Stats = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Numbers That <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Speak Volumes</span>
+            Our <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Vision in Numbers</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Real results from a platform that's revolutionizing how people get hired and how companies find talent.
+            Ambitious targets for a platform that will revolutionize how people get hired and how companies find talent.
           </p>
         </div>
         
@@ -104,15 +104,15 @@ const Stats = () => {
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div>
               <div className="text-3xl font-black text-purple-600 mb-2">500%</div>
-              <div className="text-sm text-muted-foreground">Faster than traditional hiring</div>
+              <div className="text-sm text-muted-foreground">Target speed vs traditional hiring</div>
             </div>
             <div>
               <div className="text-3xl font-black text-blue-600 mb-2">$2M+</div>
-              <div className="text-sm text-muted-foreground">Saved in recruitment costs</div>
+              <div className="text-sm text-muted-foreground">Projected recruitment cost savings</div>
             </div>
             <div>
               <div className="text-3xl font-black text-indigo-600 mb-2">98%</div>
-              <div className="text-sm text-muted-foreground">1-year retention rate</div>
+              <div className="text-sm text-muted-foreground">Target 1-year retention rate</div>
             </div>
           </div>
         </div>
