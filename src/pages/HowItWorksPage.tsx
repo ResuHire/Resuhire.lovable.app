@@ -12,19 +12,19 @@ const HowItWorksPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <div className="pt-16">
+      <div className="pt-20">
         <div 
           ref={heroRef}
-          className={`py-20 bg-gradient-to-b from-gray-50 to-white transition-all duration-1000 ${
+          className={`py-24 bg-background transition-all duration-1000 ${
             heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 hover:scale-105 transition-transform duration-500 cursor-default">
-              How <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">It Works</span>
+          <div className="max-w-4xl mx-auto px-6 text-center">
+            <h1 className="text-5xl md:text-6xl font-light mb-8 text-foreground tracking-tight">
+              How it works
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Understand the complete process from application to hire and see why we're different.
+            <p className="text-xl font-light text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+              A systematic approach to transform raw talent into industry-ready professionals.
             </p>
           </div>
         </div>
