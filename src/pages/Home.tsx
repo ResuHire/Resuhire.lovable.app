@@ -2,39 +2,43 @@
 import React from 'react';
 import Hero from '@/components/Hero';
 import SocialProof from '@/components/SocialProof';
-import Stats from '@/components/Stats';
+import TractionMetrics from '@/components/TractionMetrics';
 import DualValue from '@/components/DualValue';
-import CTA from '@/components/CTA';
+import InvestorCTA from '@/components/InvestorCTA';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Badge } from '@/components/ui/badge';
-import { CheckCircle, Shield, Brain, Target, Zap } from 'lucide-react';
+import { CheckCircle, Shield, Brain, Target, Zap, Building, Users, Award } from 'lucide-react';
 
 const Home = () => {
-  const uniqueValueProps = [
+  const competitiveAdvantages = [
     {
       icon: Shield,
-      title: "Only Platform with FAANG Internship Guarantees",
-      description: "Direct partnerships ensuring placement from year 1 of college",
-      color: "from-blue-500 to-cyan-500"
+      title: "Placement Guarantees",
+      description: "Only platform offering FAANG internship guarantees from Year 1 of college",
+      color: "from-blue-500 to-cyan-500",
+      metric: "98% placement rate"
     },
     {
       icon: Brain,
-      title: "Complete Human Transformation",
-      description: "Technical + Soft + Mental + Physical presence coaching",
-      color: "from-purple-500 to-pink-500"
+      title: "Holistic Development",
+      description: "Complete transformation: technical skills + communication + mental resilience",
+      color: "from-purple-500 to-pink-500",
+      metric: "360° approach"
     },
     {
       icon: Zap,
-      title: "AI-First Hiring Revolution",
-      description: "85% match accuracy vs traditional 15-20% resume success",
-      color: "from-green-500 to-emerald-500"
+      title: "AI-Powered Matching",
+      description: "Proprietary algorithm achieves 85% match accuracy vs 15% traditional methods",
+      color: "from-green-500 to-emerald-500",
+      metric: "5x better accuracy"
     },
     {
-      icon: Target,
-      title: "End-to-End Ecosystem",
-      description: "From skill gap identification to job placement in one platform",
-      color: "from-orange-500 to-red-500"
+      icon: Building,
+      title: "Dual Revenue Model",
+      description: "B2C subscriptions + B2B enterprise recruiting = scalable growth",
+      color: "from-orange-500 to-red-500",
+      metric: "Multiple revenue streams"
     }
   ];
 
@@ -43,53 +47,70 @@ const Home = () => {
       <Navigation />
       <Hero />
       <SocialProof />
-      <Stats />
+      <TractionMetrics />
       
-      {/* Why ResuHire is Unprecedented Section */}
+      {/* Competitive Advantages Section */}
       <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700">
-              🔥 World's Most Comprehensive Platform
+            <Badge className="mb-4 bg-gradient-to-r from-green-100 to-blue-100 text-green-700 border-green-200">
+              💼 Investment Opportunity
             </Badge>
-            <h2 className="text-4xl md:text-6xl font-bold mb-6">
-              Why ResuHire is <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Unprecedented</span>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Why ResuHire <span className="bg-gradient-to-r from-orange-600 to-purple-600 bg-clip-text text-transparent">Wins</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              The world's first platform that seamlessly integrates HRTech + EdTech + AI with FAANG access, 
-              mental preparation, and holistic human development. No other platform offers this complete transformation.
+              The world's first platform combining EdTech + HrTech with guaranteed outcomes. 
+              Addressing a $240B market with a defensible, scalable solution.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {uniqueValueProps.map((prop, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${prop.color} flex items-center justify-center mb-6`}>
-                  <prop.icon className="w-8 h-8 text-white" />
+            {competitiveAdvantages.map((advantage, index) => (
+              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
+                <div className="flex items-start gap-6">
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${advantage.color} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
+                    <advantage.icon className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center justify-between mb-3">
+                      <h3 className="text-xl font-bold text-gray-900">{advantage.title}</h3>
+                      <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full">
+                        {advantage.metric}
+                      </span>
+                    </div>
+                    <p className="text-gray-600 leading-relaxed">{advantage.description}</p>
+                  </div>
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-gray-900">{prop.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{prop.description}</p>
               </div>
             ))}
           </div>
 
-          {/* Additional emphasis */}
-          <div className="text-center mt-12">
-            <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-8 max-w-4xl mx-auto border border-purple-200">
-              <div className="flex items-center justify-center gap-2 mb-4">
-                <CheckCircle className="w-6 h-6 text-green-600" />
-                <span className="text-lg font-semibold text-gray-800">The Complete Solution</span>
+          {/* Market Opportunity */}
+          <div className="text-center mt-16">
+            <div className="bg-gradient-to-r from-gray-900 to-black rounded-3xl p-12 max-w-4xl mx-auto text-white">
+              <h3 className="text-2xl font-bold mb-6">Massive Market Opportunity</h3>
+              <div className="grid md:grid-cols-3 gap-8">
+                <div>
+                  <div className="text-3xl font-bold text-orange-400 mb-2">$240B</div>
+                  <div className="text-gray-300">Global EdTech Market</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-purple-400 mb-2">$15B</div>
+                  <div className="text-gray-300">Recruiting Software TAM</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-green-400 mb-2">73M</div>
+                  <div className="text-gray-300">College Students Globally</div>
+                </div>
               </div>
-              <p className="text-gray-700 text-lg">
-                While others focus on parts of the journey, ResuHire builds complete warriors from start to hire.
-              </p>
             </div>
           </div>
         </div>
       </section>
 
       <DualValue />
-      <CTA />
+      <InvestorCTA />
       <Footer />
     </div>
   );

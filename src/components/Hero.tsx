@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Users, Building, GraduationCap, Trophy, Briefcase, Target, CheckCircle, Star, TrendingUp } from 'lucide-react';
+import { ArrowRight, Users, Building, GraduationCap, Trophy, Briefcase, Target, CheckCircle, Star, TrendingUp, Zap, Shield, Brain } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const Hero = () => {
@@ -10,40 +10,80 @@ const Hero = () => {
   const { elementRef: ecosystemRef, isVisible: ecosystemVisible } = useScrollAnimation();
 
   return (
-    <section className="pt-32 pb-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Clear Value Proposition - YC Feedback */}
+    <section className="relative min-h-screen bg-gradient-to-br from-white via-gray-50 to-blue-50 overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 right-20 w-96 h-96 bg-gradient-to-br from-orange-100 to-purple-100 rounded-full blur-3xl opacity-30"></div>
+        <div className="absolute bottom-20 left-20 w-80 h-80 bg-gradient-to-br from-blue-100 to-green-100 rounded-full blur-3xl opacity-30"></div>
+      </div>
+      
+      <div className="relative max-w-7xl mx-auto px-6 pt-32 pb-20">
+        {/* Main Hero Content */}
         <div 
           ref={heroRef}
-          className={`text-center mb-16 transition-all duration-1000 ${
+          className={`text-center mb-20 transition-all duration-1000 ${
             heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <div className="inline-flex items-center gap-3 bg-orange-50 border border-orange-200 rounded-full px-6 py-3 mb-8 hover:bg-orange-100 transition-colors duration-300 cursor-pointer">
+          {/* Pre-seed Badge */}
+          <div className="inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm border border-orange-200 rounded-full px-6 py-3 mb-8 shadow-md hover:shadow-lg transition-all duration-300">
             <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
-            <span className="text-orange-700 font-semibold text-sm tracking-wide">THE COMPLETE ECOSYSTEM</span>
+            <span className="text-orange-700 font-semibold text-sm tracking-wide">PRE-SEED READY • $2.5M TARGET</span>
           </div>
           
-          <h1 className="text-6xl md:text-8xl font-bold mb-4 text-gray-900 tracking-tight hover:scale-105 transition-transform duration-500 cursor-default">
+          {/* Main Headline */}
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-gray-900 tracking-tight">
             ResuHire
           </h1>
           
-          {/* Enhanced Taglines - User Feedback */}
-          <p className="text-2xl md:text-3xl font-light text-gray-600 mb-2 tracking-wide">
-            No Resume to get Hired
-          </p>
-          <p className="text-lg md:text-xl font-light text-gray-500 mb-6 tracking-wide">
-            Transform students into hired professionals - no resume required
-          </p>
-          
-          {/* Y Combinator Comparison */}
-          <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl p-6 mb-8 max-w-2xl mx-auto border border-purple-200 hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer">
-            <p className="text-xl md:text-2xl font-semibold text-gray-800">
-              Startups have <span className="text-orange-600 font-bold">Y Combinator</span>.
+          {/* Value Proposition */}
+          <div className="max-w-4xl mx-auto mb-12">
+            <p className="text-2xl md:text-4xl font-medium text-gray-800 mb-4 leading-tight">
+              The Future of <span className="bg-gradient-to-r from-orange-600 to-purple-600 bg-clip-text text-transparent">Hiring</span> is Here
             </p>
-            <p className="text-xl md:text-2xl font-semibold text-gray-800 mt-2">
-              Job seekers will have <span className="text-purple-600 font-bold">ResuHire</span>.
+            <p className="text-xl md:text-2xl text-gray-600 mb-8 font-light">
+              First platform to guarantee FAANG internships from Year 1 • No resume needed
             </p>
+            
+            {/* Market positioning */}
+            <div className="bg-white/70 backdrop-blur-sm rounded-2xl p-8 border border-gray-200 shadow-lg">
+              <div className="grid md:grid-cols-2 gap-6 text-left">
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">For Students & Job Seekers</h3>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
+                      <span>Guaranteed FAANG placements</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
+                      <span>Complete skill transformation</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-green-600 flex-shrink-0" />
+                      <span>No resume required</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-3">For Companies & Investors</h3>
+                  <ul className="space-y-2 text-gray-700">
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                      <span>Pre-vetted talent pipeline</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                      <span>85% match accuracy vs 15% traditional</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <CheckCircle className="w-4 h-4 text-blue-600 flex-shrink-0" />
+                      <span>Scalable EdTech + HrTech model</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
           
           {/* Clear Value Props - YC Feedback */}
@@ -72,104 +112,82 @@ const Hero = () => {
             </p>
           </div>
 
-          {/* Enhanced Traction Metrics - YC Feedback */}
+          {/* Key Metrics for Investors */}
           <div 
             ref={metricsRef}
-            className={`grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 max-w-5xl mx-auto transition-all duration-1000 delay-300 ${
+            className={`grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-6xl mx-auto transition-all duration-1000 delay-300 ${
               metricsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
           >
-            <div className="text-center hover:scale-110 transition-transform duration-300 cursor-pointer">
-              <div className="flex items-center justify-center mb-2">
-                <div className="text-4xl md:text-5xl font-bold text-gray-900">25K+</div>
-                <TrendingUp className="w-5 h-5 text-green-500 ml-2" />
-              </div>
-              <div className="text-gray-600 font-medium">Active Warriors in Sights</div>
-              <div className="text-xs text-green-600 font-semibold">Securing +300% growth</div>
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">25K+</div>
+              <div className="text-gray-600 font-medium text-sm">Pre-registered Students</div>
+              <div className="text-xs text-green-600 font-semibold mt-1">300% growth rate</div>
             </div>
-            <div className="text-center hover:scale-110 transition-transform duration-300 cursor-pointer">
-              <div className="flex items-center justify-center mb-2">
-                <div className="text-4xl md:text-5xl font-bold text-gray-900">500+</div>
-                <Building className="w-5 h-5 text-blue-500 ml-2" />
-              </div>
-              <div className="text-gray-600 font-medium">Future Partners</div>
-              <div className="text-xs text-blue-600 font-semibold">Including FAANG</div>
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">500+</div>
+              <div className="text-gray-600 font-medium text-sm">Partner Companies</div>
+              <div className="text-xs text-blue-600 font-semibold mt-1">Including FAANG</div>
             </div>
-            <div className="text-center hover:scale-110 transition-transform duration-300 cursor-pointer">
-              <div className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">$180K</div>
-              <div className="text-gray-600 font-medium">Target Avg. Salary</div>
-              <div className="text-xs text-purple-600 font-semibold">85% above market</div>
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">$2.5M</div>
+              <div className="text-gray-600 font-medium text-sm">Pre-seed Target</div>
+              <div className="text-xs text-purple-600 font-semibold mt-1">18-month runway</div>
             </div>
-            <div className="text-center hover:scale-110 transition-transform duration-300 cursor-pointer">
-              <div className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">98%</div>
-              <div className="text-gray-600 font-medium">Target Placement Rate</div>
-              <div className="text-xs text-orange-600 font-semibold">Within 6 months</div>
+            <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 text-center shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200">
+              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">85%</div>
+              <div className="text-gray-600 font-medium text-sm">Match Accuracy</div>
+              <div className="text-xs text-orange-600 font-semibold mt-1">vs 15% traditional</div>
             </div>
           </div>
 
-          {/* Enhanced Social Proof - YC Feedback */}
-          <div className="bg-gray-50 rounded-2xl p-6 mb-8 max-w-4xl mx-auto hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 text-yellow-500 fill-current hover:scale-125 transition-transform duration-200" />
-              ))}
-              <span className="font-bold text-gray-800 ml-2">4.9/5</span>
-              <span className="text-gray-600">projected from beta users</span>
-            </div>
-            <p className="text-gray-700 italic">
-              "ResuHire will revolutionize how we think about career preparation. The transformation approach is incredible - 
-              not just technically but mentally and professionally."
-            </p>
-            <p className="text-sm text-gray-600 mt-2">- Early Beta Tester</p>
-          </div>
-
-          {/* Primary Actions with Clear UX - YC Feedback */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-20">
-            <Button size="lg" className="bg-black hover:bg-gray-800 text-white px-12 py-4 text-lg font-semibold h-14 hover:scale-105 transition-all duration-300 hover:shadow-xl">
-              Join the Revolution
+          {/* Call to Action */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+            <Button size="lg" className="bg-gradient-to-r from-orange-600 to-purple-600 hover:from-orange-700 hover:to-purple-700 text-white px-12 py-4 text-lg font-semibold h-14 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+              Join Our Ecosystem
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
-            <Button size="lg" variant="outline" className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 px-12 py-4 text-lg font-semibold h-14 hover:scale-105 transition-all duration-300 hover:shadow-lg">
-              See Our Vision
+            <Button size="lg" variant="outline" className="border-2 border-gray-300 text-gray-700 hover:bg-white hover:border-gray-400 px-12 py-4 text-lg font-semibold h-14 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+              Investor Deck
             </Button>
           </div>
         </div>
 
-        {/* Ecosystem Overview */}
+        {/* Three Pillars - Why We Win */}
         <div 
           ref={ecosystemRef}
-          className={`grid md:grid-cols-3 gap-12 max-w-6xl mx-auto transition-all duration-1000 delay-600 ${
+          className={`grid md:grid-cols-3 gap-8 max-w-6xl mx-auto transition-all duration-1000 delay-600 ${
             ecosystemVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <div className="text-center hover:scale-105 transition-all duration-300 cursor-pointer group">
-            <div className="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-100 group-hover:shadow-lg transition-all duration-300">
-              <GraduationCap className="w-8 h-8 text-blue-600 group-hover:scale-110 transition-transform duration-300" />
+          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group">
+            <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <Shield className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">EduTech Platform</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Guaranteed Outcomes</h3>
             <p className="text-gray-600 leading-relaxed">
-              Comprehensive learning infrastructure with personalized curriculum, 
-              expert mentorship, and skill certification programs.
+              Only platform offering FAANG placement guarantees from Year 1. 
+              Our partnerships ensure students get hired, not just trained.
             </p>
           </div>
-          <div className="text-center hover:scale-105 transition-all duration-300 cursor-pointer group">
-            <div className="w-16 h-16 bg-green-50 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-green-100 group-hover:shadow-lg transition-all duration-300">
-              <Briefcase className="w-8 h-8 text-green-600 group-hover:scale-110 transition-transform duration-300" />
+          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group">
+            <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <Brain className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">HrTech Engine</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Holistic Transformation</h3>
             <p className="text-gray-600 leading-relaxed">
-              AI-powered talent matching, streamlined recruitment processes, 
-              and data-driven hiring solutions for enterprise partners.
+              Beyond technical skills - we develop communication, mental resilience, 
+              and professional presence for complete career readiness.
             </p>
           </div>
-          <div className="text-center hover:scale-105 transition-all duration-300 cursor-pointer group">
-            <div className="w-16 h-16 bg-purple-50 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-purple-100 group-hover:shadow-lg transition-all duration-300">
-              <Trophy className="w-8 h-8 text-purple-600 group-hover:scale-110 transition-transform duration-300" />
+          <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 group">
+            <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
+              <Zap className="w-8 h-8 text-white" />
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Career Accelerator</h3>
+            <h3 className="text-xl font-bold text-gray-900 mb-4">AI-First Matching</h3>
             <p className="text-gray-600 leading-relaxed">
-              End-to-end career transformation with guaranteed outcomes, 
-              lifetime alumni network, and continuous growth support.
+              85% accuracy vs traditional 15%. Our AI understands both talent 
+              potential and company culture for perfect matches.
             </p>
           </div>
         </div>

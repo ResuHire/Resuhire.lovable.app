@@ -22,12 +22,12 @@ const Navigation = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+    <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-200 z-50 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <div className="w-8 h-8 bg-orange-600 rounded flex items-center justify-center mr-3">
+            <div className="w-8 h-8 bg-gradient-to-br from-orange-600 to-purple-600 rounded-lg flex items-center justify-center mr-3 shadow-md">
               <span className="text-white font-bold text-sm">R</span>
             </div>
             <span className="text-2xl font-bold text-gray-900">ResuHire</span>
@@ -51,11 +51,11 @@ const Navigation = () => {
               ))}
             </div>
             <div className="flex items-center space-x-3">
-              <Button variant="ghost" className="text-gray-700">
-                Sign In
+              <Button variant="ghost" className="text-gray-700 hover:text-gray-900">
+                Investor Login
               </Button>
-              <Button className="bg-orange-600 hover:bg-orange-700 text-white">
-                Apply Now
+              <Button className="bg-gradient-to-r from-orange-600 to-purple-600 hover:from-orange-700 hover:to-purple-700 text-white shadow-md hover:shadow-lg transition-all duration-300">
+                Join Waitlist
               </Button>
             </div>
           </div>
@@ -89,10 +89,10 @@ const Navigation = () => {
               ))}
               <div className="flex flex-col space-y-2 px-4 pt-4 border-t border-gray-200">
                 <Button variant="ghost" className="justify-start">
-                  Sign In
+                  Investor Login
                 </Button>
-                <Button className="bg-orange-600 hover:bg-orange-700 text-white justify-start">
-                  Apply Now
+                <Button className="bg-gradient-to-r from-orange-600 to-purple-600 hover:from-orange-700 hover:to-purple-700 text-white justify-start">
+                  Join Waitlist
                 </Button>
               </div>
             </div>
