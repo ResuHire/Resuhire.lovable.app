@@ -1,67 +1,56 @@
 
 import React from 'react';
-import { Building, Award, Users, TrendingUp } from 'lucide-react';
+import { Building, Users, Award, TrendingUp } from 'lucide-react';
 
 const SocialProof = () => {
   const companies = [
-    { name: "Google", logo: "🔍" },
-    { name: "Meta", logo: "👥" },
-    { name: "Amazon", logo: "📦" },
-    { name: "Apple", logo: "🍎" },
-    { name: "Microsoft", logo: "💻" },
-    { name: "Netflix", logo: "🎬" },
-    { name: "Tesla", logo: "⚡" },
-    { name: "Stripe", logo: "💳" },
-    { name: "Airbnb", logo: "🏠" },
-    { name: "Uber", logo: "🚗" },
-    { name: "Coinbase", logo: "₿" },
-    { name: "Spotify", logo: "🎵" }
+    "Google", "Meta", "Amazon", "Apple", "Microsoft", "Netflix", "Tesla", "Stripe",
+    "OpenAI", "Coinbase", "Uber", "Airbnb"
   ];
 
   const universities = [
-    { name: "MIT", logo: "🎓" },
-    { name: "Stanford", logo: "🌲" },
-    { name: "Harvard", logo: "📚" },
-    { name: "Berkeley", logo: "🐻" },
-    { name: "CMU", logo: "🤖" },
-    { name: "Caltech", logo: "🔬" },
-    { name: "Princeton", logo: "🏛️" },
-    { name: "Yale", logo: "🦬" }
+    "MIT", "Stanford", "Harvard", "Berkeley", "CMU", "Caltech", "Princeton", "Yale"
+  ];
+
+  const metrics = [
+    { icon: Users, value: "25K+", label: "Warriors in Pipeline" },
+    { icon: Building, value: "500+", label: "Target Partners" },
+    { icon: Award, value: "$2.5M", label: "Seeking Seed Round" },
+    { icon: TrendingUp, value: "98%", label: "Projected Success" }
   ];
 
   return (
-    <section className="py-16 bg-white">
-      <div className="container mx-auto px-6">
-        {/* Companies */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-blue-50 rounded-full px-4 py-2 mb-8 border border-blue-200">
-            <Building className="w-4 h-4 text-blue-600" />
-            <span className="text-blue-700 font-medium text-sm">Partner companies</span>
-          </div>
-          
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-6 items-center max-w-4xl mx-auto">
-            {companies.map((company, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg p-4 text-center hover:bg-gray-100 transition-colors">
-                <div className="text-2xl mb-2">{company.logo}</div>
-                <div className="text-sm font-medium text-gray-700">{company.name}</div>
+    <section className="py-16 bg-gray-50 border-y border-gray-200">
+      <div className="container mx-auto px-4">
+        {/* Metrics */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+          {metrics.map((metric, index) => (
+            <div key={index} className="text-center">
+              <div className="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center mx-auto mb-3">
+                <metric.icon className="w-6 h-6 text-orange-600" />
               </div>
+              <div className="text-2xl font-bold text-gray-900 mb-1">{metric.value}</div>
+              <div className="text-sm text-gray-600 font-medium">{metric.label}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Partner Companies */}
+        <div className="text-center mb-12">
+          <h3 className="text-lg font-bold text-gray-900 mb-6">Future partners we're targeting</h3>
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center opacity-60">
+            {companies.map((company, index) => (
+              <div key={index} className="text-lg font-semibold text-gray-700">{company}</div>
             ))}
           </div>
         </div>
 
         {/* Universities */}
         <div className="text-center">
-          <div className="inline-flex items-center gap-2 bg-green-50 rounded-full px-4 py-2 mb-8 border border-green-200">
-            <Award className="w-4 h-4 text-green-600" />
-            <span className="text-green-700 font-medium text-sm">Top talent from</span>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center max-w-3xl mx-auto">
+          <h3 className="text-lg font-bold text-gray-900 mb-6">Targeting alumni from top institutions</h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60">
             {universities.map((university, index) => (
-              <div key={index} className="bg-gray-50 rounded-lg p-4 text-center hover:bg-gray-100 transition-colors">
-                <div className="text-2xl mb-2">{university.logo}</div>
-                <div className="text-sm font-medium text-gray-700">{university.name}</div>
-              </div>
+              <div key={index} className="text-lg font-semibold text-gray-700">{university}</div>
             ))}
           </div>
         </div>

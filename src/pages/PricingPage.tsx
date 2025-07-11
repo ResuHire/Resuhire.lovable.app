@@ -12,19 +12,19 @@ const PricingPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <div className="pt-20">
+      <div className="pt-16">
         <div 
           ref={heroRef}
-          className={`py-24 bg-background transition-all duration-1000 ${
+          className={`py-20 bg-gradient-to-b from-gray-50 to-white transition-all duration-1000 ${
             heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <h1 className="text-5xl md:text-6xl font-light mb-8 text-foreground tracking-tight">
-              Pricing
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 hover:scale-105 transition-transform duration-500 cursor-default">
+              Simple <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Pricing</span>
             </h1>
-            <p className="text-xl font-light text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Investment options for your career transformation journey.
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Choose the plan that fits your journey from student to professional.
             </p>
           </div>
         </div>

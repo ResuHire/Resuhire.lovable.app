@@ -8,91 +8,80 @@ import CTA from '@/components/CTA';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Badge } from '@/components/ui/badge';
-import { CheckCircle, Shield, Brain, Target, Zap, Users, Building } from 'lucide-react';
+import { CheckCircle, Shield, Brain, Target, Zap } from 'lucide-react';
 
 const Home = () => {
-  const valueProps = [
+  const uniqueValueProps = [
     {
       icon: Shield,
-      title: "Direct Company Access",
-      description: "We work directly with hiring managers at top companies to get you in front of the right people.",
-      color: "blue"
+      title: "Only Platform with FAANG Internship Guarantees",
+      description: "Direct partnerships ensuring placement from year 1 of college",
+      color: "from-blue-500 to-cyan-500"
     },
     {
       icon: Brain,
-      title: "Skills-Based Matching",
-      description: "Our platform evaluates your actual abilities, not just your resume or degree.",
-      color: "purple"
+      title: "Complete Human Transformation",
+      description: "Technical + Soft + Mental + Physical presence coaching",
+      color: "from-purple-500 to-pink-500"
     },
     {
       icon: Zap,
-      title: "Fast Track Process",
-      description: "Skip the lengthy application process. Get matched and interviewed within weeks, not months.",
-      color: "green"
+      title: "AI-First Hiring Revolution",
+      description: "85% match accuracy vs traditional 15-20% resume success",
+      color: "from-green-500 to-emerald-500"
     },
     {
       icon: Target,
-      title: "Personalized Preparation",
-      description: "Get coached on exactly what each company is looking for before your interview.",
-      color: "orange"
+      title: "End-to-End Ecosystem",
+      description: "From skill gap identification to job placement in one platform",
+      color: "from-orange-500 to-red-500"
     }
   ];
 
-  const getColorClasses = (color: string) => {
-    const colors = {
-      blue: "from-blue-500 to-blue-600",
-      purple: "from-purple-500 to-purple-600", 
-      green: "from-green-500 to-green-600",
-      orange: "from-orange-500 to-orange-600"
-    };
-    return colors[color as keyof typeof colors] || "from-gray-500 to-gray-600";
-  };
-
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <Navigation />
       <Hero />
       <SocialProof />
       <Stats />
       
-      {/* Why ResuHire section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-6">
+      {/* Why ResuHire is Unprecedented Section */}
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-purple-100 text-purple-700 border-purple-200">
-              Why ResuHire
+            <Badge className="mb-4 bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700">
+              🔥 World's Most Comprehensive Platform
             </Badge>
-            
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-              A better way to get hired
+            <h2 className="text-4xl md:text-6xl font-bold mb-6">
+              Why ResuHire is <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Unprecedented</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              We're changing how talented people connect with great companies. 
-              No more resume black holes or endless applications.
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              The world's first platform that seamlessly integrates HRTech + EdTech + AI with FAANG access, 
+              mental preparation, and holistic human development. No other platform offers this complete transformation.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {valueProps.map((prop, index) => (
-              <div key={index} className="bg-white rounded-xl p-8 shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
-                <div className={`w-12 h-12 bg-gradient-to-r ${getColorClasses(prop.color)} rounded-lg flex items-center justify-center mb-6`}>
-                  <prop.icon className="w-6 h-6 text-white" />
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            {uniqueValueProps.map((prop, index) => (
+              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${prop.color} flex items-center justify-center mb-6`}>
+                  <prop.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-gray-900">{prop.title}</h3>
+                <h3 className="text-xl font-bold mb-4 text-gray-900">{prop.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{prop.description}</p>
               </div>
             ))}
           </div>
 
-          {/* Market opportunity */}
-          <div className="text-center mt-16">
-            <div className="bg-white rounded-xl p-8 max-w-3xl mx-auto shadow-sm border border-gray-200">
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <Building className="w-6 h-6 text-purple-600" />
-                <span className="text-lg font-semibold text-gray-900">Trusted by 150+ Companies</span>
+          {/* Additional emphasis */}
+          <div className="text-center mt-12">
+            <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-8 max-w-4xl mx-auto border border-purple-200">
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <CheckCircle className="w-6 h-6 text-green-600" />
+                <span className="text-lg font-semibold text-gray-800">The Complete Solution</span>
               </div>
-              <p className="text-gray-600">
-                From fast-growing startups to Fortune 500 companies, our partners are actively hiring through our platform.
+              <p className="text-gray-700 text-lg">
+                While others focus on parts of the journey, ResuHire builds complete warriors from start to hire.
               </p>
             </div>
           </div>

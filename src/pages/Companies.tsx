@@ -10,14 +10,14 @@ const Companies = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <div className="pt-20">
-        <div className="py-24 bg-background">
-          <div className="max-w-4xl mx-auto px-6 text-center">
-            <h1 className="text-5xl md:text-6xl font-light mb-8 text-foreground tracking-tight">
-              Companies
+      <div className="pt-16">
+        <div className="py-20 bg-gradient-to-b from-gray-50 to-white">
+          <div className="container mx-auto px-4 text-center">
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Partner <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Companies</span>
             </h1>
-            <p className="text-xl font-light text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-              Building partnerships with industry leaders who value transformed talent.
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Discover the amazing companies that trust ResuHire to find their next great hires.
             </p>
           </div>
         </div>
