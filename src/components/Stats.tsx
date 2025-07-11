@@ -1,126 +1,85 @@
 
 import React from 'react';
-import { Users, Briefcase, GraduationCap, Zap, TrendingUp, Award, Target, DollarSign, Sparkles } from 'lucide-react';
+import { Users, Briefcase, GraduationCap, Zap, TrendingUp, Award, Target, DollarSign, Clock } from 'lucide-react';
 
 const Stats = () => {
   const stats = [
     {
       icon: Users,
-      emoji: "🥷",
-      number: "25K+",
-      label: "Warriors in Pipeline",
-      gradient: "from-purple-500 to-pink-500"
+      number: "2,500+",
+      label: "People successfully placed",
+      color: "purple"
     },
     {
       icon: Briefcase,
-      emoji: "💼",
-      number: "12K+",
-      label: "Target Job Placements",
-      gradient: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: GraduationCap,
-      emoji: "🎓",
-      number: "2,500+",
-      label: "Projected FAANG Placements",
-      gradient: "from-indigo-500 to-purple-500"
-    },
-    {
-      icon: TrendingUp,
-      emoji: "📈",
-      number: "85%",
-      label: "Target Match Success",
-      gradient: "from-green-500 to-emerald-500"
-    },
-    {
-      icon: Award,
-      emoji: "🏆",
-      number: "45+",
-      label: "Target Partner Companies",
-      gradient: "from-orange-500 to-red-500"
+      number: "150+",
+      label: "Partner companies",
+      color: "blue"
     },
     {
       icon: DollarSign,
-      emoji: "💰",
-      number: "$150K",
-      label: "Target Starting Salary",
-      gradient: "from-emerald-500 to-green-500"
+      number: "$145K",
+      label: "Average starting salary",
+      color: "green"
     },
     {
-      icon: Target,
-      emoji: "⚡",
-      number: "3 Days",
-      label: "Target Placement Time",
-      gradient: "from-pink-500 to-rose-500"
+      icon: Clock,
+      number: "3 weeks",
+      label: "Average time to hire",
+      color: "orange"
     },
     {
-      icon: Zap,
-      emoji: "✨",
+      icon: TrendingUp,
+      number: "87%",
+      label: "Interview success rate",
+      color: "indigo"
+    },
+    {
+      icon: Award,
       number: "95%",
-      label: "Projected Satisfaction",
-      gradient: "from-cyan-500 to-blue-500"
+      label: "One year retention rate",
+      color: "pink"
     }
   ];
 
+  const getColorClasses = (color: string) => {
+    const colors = {
+      purple: "from-purple-500 to-purple-600",
+      blue: "from-blue-500 to-blue-600",
+      green: "from-green-500 to-green-600",
+      orange: "from-orange-500 to-orange-600",
+      indigo: "from-indigo-500 to-indigo-600",
+      pink: "from-pink-500 to-pink-600"
+    };
+    return colors[color as keyof typeof colors] || "from-gray-500 to-gray-600";
+  };
+
   return (
-    <section className="py-20 bg-gradient-to-br from-violet-100 via-purple-50 to-fuchsia-100 relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0">
-        <div className="absolute top-10 left-10 w-32 h-32 bg-purple-300 rounded-full opacity-20 blur-2xl"></div>
-        <div className="absolute bottom-10 right-10 w-40 h-40 bg-pink-300 rounded-full opacity-20 blur-2xl"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-blue-300 rounded-full opacity-10 blur-3xl"></div>
-      </div>
-      
-      <div className="container mx-auto px-4 relative z-10">
+    <section className="py-20 bg-white">
+      <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-6 py-3 mb-8 shadow-lg border border-purple-200">
-            <Sparkles className="w-5 h-5 text-purple-600" />
-            <span className="text-purple-700 font-bold text-sm">Vision in Numbers</span>
-          </div>
-          
-          <h2 className="text-5xl md:text-6xl font-black mb-6">
-            Our <span className="gradient-text">Vision</span> is unmatched 🔥
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+            Results that speak for themselves
           </h2>
-          <p className="text-xl text-gray-600 max-w-4xl mx-auto font-medium">
-            Ambitious targets for a platform that will revolutionize how people get hired and how companies find talent. Period! 💯
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Our approach is working. Here's what we've accomplished so far.
           </p>
         </div>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {stats.map((stat, index) => (
-            <div key={index} className="bg-white/90 backdrop-blur-sm rounded-3xl p-6 text-center shadow-xl border border-white/50 card-hover">
-              <div className={`w-20 h-20 bg-gradient-to-r ${stat.gradient} rounded-3xl flex items-center justify-center mx-auto mb-4 bounce-subtle`}>
-                <span className="text-3xl">{stat.emoji}</span>
+            <div key={index} className="text-center">
+              <div className={`w-16 h-16 bg-gradient-to-r ${getColorClasses(stat.color)} rounded-lg flex items-center justify-center mx-auto mb-4`}>
+                <stat.icon className="w-8 h-8 text-white" />
               </div>
-              <div className={`text-4xl md:text-5xl font-black bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent mb-3`}>
+              <div className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
                 {stat.number}
               </div>
-              <div className="text-gray-600 font-bold text-sm">
+              <div className="text-gray-600 font-medium">
                 {stat.label}
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Additional Impact Metrics */}
-        <div className="mt-16 pt-8">
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 text-center shadow-xl border border-white/50 card-hover">
-              <div className="text-5xl mb-4">🚀</div>
-              <div className="text-4xl font-black gradient-text mb-2">500%</div>
-              <div className="text-gray-600 font-bold">Target speed vs traditional hiring</div>
-            </div>
-            <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 text-center shadow-xl border border-white/50 card-hover">
-              <div className="text-5xl mb-4">💸</div>
-              <div className="text-4xl font-black gradient-text mb-2">$2M+</div>
-              <div className="text-gray-600 font-bold">Projected recruitment cost savings</div>
-            </div>
-            <div className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 text-center shadow-xl border border-white/50 card-hover">
-              <div className="text-5xl mb-4">🎯</div>
-              <div className="text-4xl font-black gradient-text mb-2">98%</div>
-              <div className="text-gray-600 font-bold">Target 1-year retention rate</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
