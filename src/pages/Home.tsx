@@ -8,76 +8,86 @@ import CTA from '@/components/CTA';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Badge } from '@/components/ui/badge';
-import { CheckCircle, Shield, Brain, Target, Zap } from 'lucide-react';
+import { CheckCircle, Shield, Brain, Target, Zap, Sparkles, Rocket, Trophy } from 'lucide-react';
 
 const Home = () => {
   const uniqueValueProps = [
     {
       icon: Shield,
+      emoji: "🛡️",
       title: "FAANG Internship Guarantees",
       description: "Direct partnerships ensuring placement from your first year of college",
-      color: "text-blue-600"
+      gradient: "from-blue-500 to-cyan-500"
     },
     {
       icon: Brain,
+      emoji: "🧠", 
       title: "Complete Human Transformation",
       description: "Technical + soft skills + mental coaching + body language mastery",
-      color: "text-purple-600"
+      gradient: "from-purple-500 to-pink-500"
     },
     {
       icon: Zap,
-      title: "AI-First Hiring Revolution",
+      emoji: "⚡",
+      title: "AI-First Hiring Revolution", 
       description: "85% match accuracy versus traditional 15-20% resume success rates",
-      color: "text-green-600"
+      gradient: "from-green-500 to-emerald-500"
     },
     {
       icon: Target,
+      emoji: "🎯",
       title: "End-to-End Ecosystem",
       description: "From skill development to job placement in one unified platform",
-      color: "text-orange-600"
+      gradient: "from-orange-500 to-red-500"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <Navigation />
       <Hero />
       <SocialProof />
       <Stats />
       
-      {/* Clean Why ResuHire section */}
-      <section className="py-20 bg-background">
+      {/* Why ResuHire section with Gen Z vibes */}
+      <section className="py-20 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-light mb-6">
-              Why <span className="font-medium">ResuHire</span> is different
+            <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-6 py-3 mb-8 shadow-lg border border-purple-200">
+              <Sparkles className="w-5 h-5 text-purple-600" />
+              <span className="text-purple-700 font-bold text-sm">Why we're different</span>
+            </div>
+            
+            <h2 className="text-5xl md:text-6xl font-black mb-6">
+              Why <span className="gradient-text">ResuHire</span> hits different 💯
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed font-medium">
               The world's first platform that seamlessly integrates HRTech + EdTech + AI 
-              with guaranteed access to top companies and complete career transformation.
+              with guaranteed access to top companies and complete career transformation. No cap! 🚀
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {uniqueValueProps.map((prop, index) => (
-              <div key={index} className="bg-card rounded-2xl p-8 border border-border hover:shadow-lg transition-all duration-300">
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-                  <prop.icon className={`w-6 h-6 ${prop.color}`} />
+              <div key={index} className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 border border-white/50 shadow-xl card-hover">
+                <div className={`w-20 h-20 bg-gradient-to-r ${prop.gradient} rounded-3xl flex items-center justify-center mb-6 bounce-subtle`}>
+                  <span className="text-3xl">{prop.emoji}</span>
                 </div>
-                <h3 className="text-xl font-medium mb-4 text-card-foreground">{prop.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{prop.description}</p>
+                <h3 className="text-2xl font-black mb-4 text-gray-900">{prop.title}</h3>
+                <p className="text-gray-600 leading-relaxed font-medium text-lg">{prop.description}</p>
               </div>
             ))}
           </div>
 
           {/* Market opportunity callout */}
           <div className="text-center mt-16">
-            <div className="bg-muted/50 rounded-2xl p-8 max-w-3xl mx-auto border border-border">
-              <div className="flex items-center justify-center gap-2 mb-4">
-                <CheckCircle className="w-6 h-6 text-primary" />
-                <span className="text-lg font-medium text-foreground">$200B+ Market Opportunity</span>
+            <div className="bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl p-8 max-w-4xl mx-auto shadow-2xl">
+              <div className="flex items-center justify-center gap-3 mb-4">
+                <Trophy className="w-8 h-8 text-yellow-300" />
+                <span className="text-2xl font-black text-white">$200B+ Market Opportunity</span>
+                <span className="text-3xl">💰</span>
               </div>
-              <p className="text-muted-foreground text-lg">
+              <p className="text-white/90 text-xl font-medium">
                 Positioned at the intersection of the fastest-growing recruitment and education technology markets.
               </p>
             </div>

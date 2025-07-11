@@ -1,116 +1,111 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Users, Building, GraduationCap, Trophy, Briefcase, Target, CheckCircle, Star, TrendingUp } from 'lucide-react';
+import { ArrowRight, Zap, Rocket, Star, Trophy, Target, Brain, Code, Sparkles } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const Hero = () => {
   const { elementRef: heroRef, isVisible: heroVisible } = useScrollAnimation();
-  const { elementRef: metricsRef, isVisible: metricsVisible } = useScrollAnimation();
-  const { elementRef: ecosystemRef, isVisible: ecosystemVisible } = useScrollAnimation();
 
   return (
-    <section className="pt-20 pb-32 bg-background relative overflow-hidden">
-      {/* Subtle background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-muted/20 via-background to-background"></div>
+    <section className="relative pt-20 pb-32 bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse"></div>
+        <div className="absolute top-40 right-10 w-72 h-72 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-2000"></div>
+        <div className="absolute -bottom-8 left-20 w-72 h-72 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-pulse animation-delay-4000"></div>
+      </div>
       
-      <div className="max-w-6xl mx-auto px-6 relative">
-        {/* Clean, minimal hero section */}
+      <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div 
           ref={heroRef}
-          className={`text-center mb-20 transition-all duration-1000 ${
+          className={`text-center transition-all duration-1000 ${
             heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          {/* Minimal status badge */}
-          <div className="inline-flex items-center gap-2 bg-muted rounded-full px-4 py-2 mb-8 text-sm font-medium">
-            <div className="w-2 h-2 bg-primary rounded-full"></div>
-            <span className="text-muted-foreground">Building the future of hiring</span>
+          {/* Emoji + Status badge */}
+          <div className="inline-flex items-center gap-3 bg-white/80 backdrop-blur-sm rounded-full px-6 py-3 mb-8 shadow-lg border border-purple-200">
+            <div className="flex gap-1">
+              <span className="text-2xl">🔥</span>
+              <span className="text-2xl">🚀</span>
+              <span className="text-2xl">💎</span>
+            </div>
+            <span className="text-purple-700 font-bold text-sm">Building the future of careers</span>
           </div>
           
-          {/* Clean main heading */}
-          <h1 className="text-5xl md:text-7xl font-light mb-6 text-foreground tracking-tight">
-            Transform talent,<br />
-            <span className="font-medium">accelerate careers</span>
+          {/* Main heading with gradient */}
+          <h1 className="text-6xl md:text-8xl font-black mb-8 leading-tight">
+            <span className="gradient-text">Skip the resume,</span><br />
+            <span className="text-gray-900">land at</span> <span className="gradient-text">FAANG</span>
           </h1>
           
-          {/* Simple value proposition */}
-          <p className="text-xl md:text-2xl font-light text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-            The world's first platform combining AI-powered matching with comprehensive career transformation. 
-            No resume needed—just talent, ambition, and results.
+          {/* Subtitle with emojis */}
+          <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed font-medium">
+            The world's first AI platform that transforms you into a <span className="text-purple-600 font-bold">FAANG-ready warrior</span> 🥷 
+            <br />No resume BS, just pure skill + guaranteed placements ✨
           </p>
           
-          {/* Clean CTA buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-base font-medium rounded-lg">
-              Join the revolution
-              <ArrowRight className="ml-2 w-4 h-4" />
+          {/* CTA buttons */}
+          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-16">
+            <Button size="lg" className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-10 py-6 text-lg font-bold rounded-2xl shadow-2xl card-hover glow-effect">
+              <Rocket className="mr-3 w-6 h-6" />
+              Start Your Transformation
+              <ArrowRight className="ml-3 w-6 h-6" />
             </Button>
-            <Button size="lg" variant="outline" className="border-border text-foreground hover:bg-muted px-8 py-4 text-base font-medium rounded-lg">
-              See how it works
+            <Button size="lg" variant="outline" className="border-2 border-purple-300 text-purple-700 hover:bg-purple-50 px-10 py-6 text-lg font-bold rounded-2xl card-hover">
+              <Sparkles className="mr-3 w-6 h-6" />
+              See How It Works
             </Button>
           </div>
         </div>
 
-        {/* Clean metrics section */}
-        <div 
-          ref={metricsRef}
-          className={`grid grid-cols-2 md:grid-cols-4 gap-8 mb-20 transition-all duration-1000 delay-300 ${
-            metricsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
-        >
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-light text-foreground mb-2">25K+</div>
-            <div className="text-sm text-muted-foreground font-medium">Warriors in pipeline</div>
-          </div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-light text-foreground mb-2">500+</div>
-            <div className="text-sm text-muted-foreground font-medium">Target partners</div>
-          </div>
-          <div className="text-3xl md:text-4xl font-light text-foreground mb-2">$180K</div>
-          <div className="text-sm text-muted-foreground font-medium">Target avg. salary</div>
-          <div className="text-center">
-            <div className="text-3xl md:text-4xl font-light text-foreground mb-2">98%</div>
-            <div className="text-sm text-muted-foreground font-medium">Target placement rate</div>
-          </div>
+        {/* Metrics with colorful cards */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          {[
+            { number: "25K+", label: "Warriors in Pipeline", icon: Trophy, color: "from-yellow-400 to-orange-500" },
+            { number: "500+", label: "Target FAANG Partners", icon: Target, color: "from-blue-400 to-cyan-500" },
+            { number: "$180K", label: "Target Avg Salary", icon: Zap, color: "from-green-400 to-emerald-500" },
+            { number: "98%", label: "Target Success Rate", icon: Star, color: "from-purple-400 to-pink-500" }
+          ].map((stat, index) => (
+            <div key={index} className="bg-white/90 backdrop-blur-sm rounded-3xl p-6 text-center shadow-xl border border-white/50 card-hover">
+              <div className={`w-16 h-16 bg-gradient-to-r ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4 bounce-subtle`}>
+                <stat.icon className="w-8 h-8 text-white" />
+              </div>
+              <div className="text-3xl font-black text-gray-900 mb-2">{stat.number}</div>
+              <div className="text-sm font-bold text-gray-600">{stat.label}</div>
+            </div>
+          ))}
         </div>
 
-        {/* Clean ecosystem cards */}
-        <div 
-          ref={ecosystemRef}
-          className={`grid md:grid-cols-3 gap-8 max-w-5xl mx-auto transition-all duration-1000 delay-600 ${
-            ecosystemVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
-        >
-          <div className="bg-card rounded-2xl p-8 border border-border hover:shadow-lg transition-all duration-300">
-            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-              <GraduationCap className="w-6 h-6 text-primary" />
+        {/* Process cards */}
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mt-20">
+          {[
+            {
+              emoji: "🧠",
+              title: "AI Assessment",
+              desc: "3 questions → Complete skill map",
+              color: "from-indigo-500 to-purple-600"
+            },
+            {
+              emoji: "⚡",
+              title: "Warrior Training",
+              desc: "12-week transformation bootcamp",
+              color: "from-purple-500 to-pink-600"
+            },
+            {
+              emoji: "🎯",
+              title: "FAANG Placement",
+              desc: "Direct connections + guarantees",
+              color: "from-pink-500 to-red-600"
+            }
+          ].map((step, index) => (
+            <div key={index} className="bg-white/90 backdrop-blur-sm rounded-3xl p-8 card-hover shadow-xl border border-white/50">
+              <div className="text-6xl mb-6 bounce-subtle">{step.emoji}</div>
+              <h3 className="text-2xl font-black text-gray-900 mb-4">{step.title}</h3>
+              <p className="text-gray-600 text-lg font-medium">{step.desc}</p>
+              <div className={`h-2 bg-gradient-to-r ${step.color} rounded-full mt-6`}></div>
             </div>
-            <h3 className="text-xl font-medium text-card-foreground mb-4">Learn & Grow</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              Comprehensive skill development with personalized mentorship and cutting-edge curriculum.
-            </p>
-          </div>
-          
-          <div className="bg-card rounded-2xl p-8 border border-border hover:shadow-lg transition-all duration-300">
-            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-              <Target className="w-6 h-6 text-primary" />
-            </div>
-            <h3 className="text-xl font-medium text-card-foreground mb-4">Get Matched</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              AI-powered matching connects you with the right opportunities based on skills and potential.
-            </p>
-          </div>
-          
-          <div className="bg-card rounded-2xl p-8 border border-border hover:shadow-lg transition-all duration-300">
-            <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-              <Trophy className="w-6 h-6 text-primary" />
-            </div>
-            <h3 className="text-xl font-medium text-card-foreground mb-4">Land Your Dream Job</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              Guaranteed placements at top companies with comprehensive career support.
-            </p>
-          </div>
+          ))}
         </div>
       </div>
     </section>
