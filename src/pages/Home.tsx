@@ -14,27 +14,27 @@ const Home = () => {
   const uniqueValueProps = [
     {
       icon: Shield,
-      title: "Only Platform with FAANG Internship Guarantees",
-      description: "Direct partnerships ensuring placement from year 1 of college",
-      color: "from-blue-500 to-cyan-500"
+      title: "FAANG Internship Guarantees",
+      description: "Direct partnerships ensuring placement from your first year of college",
+      color: "text-blue-600"
     },
     {
       icon: Brain,
       title: "Complete Human Transformation",
-      description: "Technical + Soft + Mental + Physical presence coaching",
-      color: "from-purple-500 to-pink-500"
+      description: "Technical + soft skills + mental coaching + body language mastery",
+      color: "text-purple-600"
     },
     {
       icon: Zap,
       title: "AI-First Hiring Revolution",
-      description: "85% match accuracy vs traditional 15-20% resume success",
-      color: "from-green-500 to-emerald-500"
+      description: "85% match accuracy versus traditional 15-20% resume success rates",
+      color: "text-green-600"
     },
     {
       icon: Target,
       title: "End-to-End Ecosystem",
-      description: "From skill gap identification to job placement in one platform",
-      color: "from-orange-500 to-red-500"
+      description: "From skill development to job placement in one unified platform",
+      color: "text-orange-600"
     }
   ];
 
@@ -45,43 +45,40 @@ const Home = () => {
       <SocialProof />
       <Stats />
       
-      {/* Why ResuHire is Unprecedented Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+      {/* Clean Why ResuHire section */}
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700">
-              🔥 World's Most Comprehensive Platform
-            </Badge>
-            <h2 className="text-4xl md:text-6xl font-bold mb-6">
-              Why ResuHire is <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Unprecedented</span>
+            <h2 className="text-4xl md:text-5xl font-light mb-6">
+              Why <span className="font-medium">ResuHire</span> is different
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              The world's first platform that seamlessly integrates HRTech + EdTech + AI with FAANG access, 
-              mental preparation, and holistic human development. No other platform offers this complete transformation.
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              The world's first platform that seamlessly integrates HRTech + EdTech + AI 
+              with guaranteed access to top companies and complete career transformation.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {uniqueValueProps.map((prop, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${prop.color} flex items-center justify-center mb-6`}>
-                  <prop.icon className="w-8 h-8 text-white" />
+              <div key={index} className="bg-card rounded-2xl p-8 border border-border hover:shadow-lg transition-all duration-300">
+                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                  <prop.icon className={`w-6 h-6 ${prop.color}`} />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-gray-900">{prop.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{prop.description}</p>
+                <h3 className="text-xl font-medium mb-4 text-card-foreground">{prop.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{prop.description}</p>
               </div>
             ))}
           </div>
 
-          {/* Additional emphasis */}
-          <div className="text-center mt-12">
-            <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-8 max-w-4xl mx-auto border border-purple-200">
+          {/* Market opportunity callout */}
+          <div className="text-center mt-16">
+            <div className="bg-muted/50 rounded-2xl p-8 max-w-3xl mx-auto border border-border">
               <div className="flex items-center justify-center gap-2 mb-4">
-                <CheckCircle className="w-6 h-6 text-green-600" />
-                <span className="text-lg font-semibold text-gray-800">The Complete Solution</span>
+                <CheckCircle className="w-6 h-6 text-primary" />
+                <span className="text-lg font-medium text-foreground">$200B+ Market Opportunity</span>
               </div>
-              <p className="text-gray-700 text-lg">
-                While others focus on parts of the journey, ResuHire builds complete warriors from start to hire.
+              <p className="text-muted-foreground text-lg">
+                Positioned at the intersection of the fastest-growing recruitment and education technology markets.
               </p>
             </div>
           </div>

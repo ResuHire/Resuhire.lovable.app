@@ -12,45 +12,37 @@ const SocialProof = () => {
     "MIT", "Stanford", "Harvard", "Berkeley", "CMU", "Caltech", "Princeton", "Yale"
   ];
 
-  const metrics = [
-    { icon: Users, value: "25K+", label: "Warriors in Pipeline" },
-    { icon: Building, value: "500+", label: "Target Partners" },
-    { icon: Award, value: "$2.5M", label: "Seeking Seed Round" },
-    { icon: TrendingUp, value: "98%", label: "Projected Success" }
-  ];
-
   return (
-    <section className="py-16 bg-gray-50 border-y border-gray-200">
+    <section className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
-        {/* Metrics */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-          {metrics.map((metric, index) => (
-            <div key={index} className="text-center">
-              <div className="w-12 h-12 bg-white rounded-lg shadow-sm flex items-center justify-center mx-auto mb-3">
-                <metric.icon className="w-6 h-6 text-orange-600" />
-              </div>
-              <div className="text-2xl font-bold text-gray-900 mb-1">{metric.value}</div>
-              <div className="text-sm text-gray-600 font-medium">{metric.label}</div>
-            </div>
-          ))}
-        </div>
-
         {/* Partner Companies */}
-        <div className="text-center mb-12">
-          <h3 className="text-lg font-bold text-gray-900 mb-6">Future partners we're targeting</h3>
-          <div className="grid grid-cols-3 md:grid-cols-6 gap-8 items-center opacity-60">
+        <div className="text-center mb-16">
+          <h3 className="text-sm font-medium text-muted-foreground mb-8 uppercase tracking-wider">
+            Future partners we're targeting
+          </h3>
+          <div className="grid grid-cols-3 md:grid-cols-6 gap-x-8 gap-y-6 items-center max-w-4xl mx-auto">
             {companies.map((company, index) => (
-              <div key={index} className="text-lg font-semibold text-gray-700">{company}</div>
+              <div key={index} className="text-center">
+                <div className="text-lg font-light text-muted-foreground/70 hover:text-muted-foreground transition-colors">
+                  {company}
+                </div>
+              </div>
             ))}
           </div>
         </div>
 
         {/* Universities */}
         <div className="text-center">
-          <h3 className="text-lg font-bold text-gray-900 mb-6">Targeting alumni from top institutions</h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60">
+          <h3 className="text-sm font-medium text-muted-foreground mb-8 uppercase tracking-wider">
+            Targeting talent from top institutions
+          </h3>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-6 items-center max-w-3xl mx-auto">
             {universities.map((university, index) => (
-              <div key={index} className="text-lg font-semibold text-gray-700">{university}</div>
+              <div key={index} className="text-center">
+                <div className="text-lg font-light text-muted-foreground/70 hover:text-muted-foreground transition-colors">
+                  {university}
+                </div>
+              </div>
             ))}
           </div>
         </div>
