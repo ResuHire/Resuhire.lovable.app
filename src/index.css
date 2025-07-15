@@ -35,20 +35,7 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 222.2 84% 4.9%;
 
-    --radius: 0.75rem;
-
-    /* Iterative VC inspired colors - clean and minimal */
-    --brand-primary: 214 100% 56%; /* Clean blue like Iterative */
-    --brand-secondary: 0 0% 9%; /* Dark text */
-    --brand-accent: 214 100% 96%; /* Light blue background */
-    --brand-neutral: 0 0% 98%; /* Almost white */
-    --brand-gray: 0 0% 64%; /* Medium gray for text */
-    
-    /* Minimal shadows - very subtle */
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.05);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.05);
-    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.05);
+    --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
 
