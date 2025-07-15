@@ -30,10 +30,10 @@ const Hero = () => {
           
           {/* Enhanced Taglines - User Feedback */}
           <p className="text-2xl md:text-3xl font-light text-gray-600 mb-2 tracking-wide">
-            No Resume to get Hired
+            Career Catalyst in 12 Weeks
           </p>
           <p className="text-lg md:text-xl font-light text-gray-500 mb-6 tracking-wide">
-            Transform students into hired professionals - no resume required
+            Global accelerator program guaranteeing job placement within 3 weeks after graduation
           </p>
           
           {/* Y Combinator Comparison */}
@@ -51,24 +51,24 @@ const Hero = () => {
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="bg-blue-50 rounded-lg p-4 hover:bg-blue-100 hover:scale-105 transition-all duration-300 cursor-pointer">
                 <CheckCircle className="w-6 h-6 text-blue-600 mx-auto mb-2" />
-                <h3 className="font-bold text-blue-800 mb-1">No Resume Needed</h3>
-                <p className="text-sm text-blue-600">Just 3 questions: Who are you? What do you know? How do you do it?</p>
+                <h3 className="font-bold text-blue-800 mb-1">AI Career Matching</h3>
+                <p className="text-sm text-blue-600">Hirexus AI finds your perfect career path through smart conversations</p>
               </div>
               <div className="bg-purple-50 rounded-lg p-4 hover:bg-purple-100 hover:scale-105 transition-all duration-300 cursor-pointer">
                 <Trophy className="w-6 h-6 text-purple-600 mx-auto mb-2" />
-                <h3 className="font-bold text-purple-800 mb-1">FAANG Internships</h3>
-                <p className="text-sm text-purple-600">Guaranteed placements from your first year of college</p>
+                <h3 className="font-bold text-purple-800 mb-1">Global 12-Week Program</h3>
+                <p className="text-sm text-purple-600">Intensive hands-on training across 3 countries with 120-200 cohorts</p>
               </div>
               <div className="bg-green-50 rounded-lg p-4 hover:bg-green-100 hover:scale-105 transition-all duration-300 cursor-pointer">
                 <Target className="w-6 h-6 text-green-600 mx-auto mb-2" />
-                <h3 className="font-bold text-green-800 mb-1">Complete Training</h3>
-                <p className="text-sm text-green-600">Technical + mental + communication + body language coaching</p>
+                <h3 className="font-bold text-green-800 mb-1">FAANG Mentors</h3>
+                <p className="text-sm text-green-600">Coached by actual engineers, founders, and PMs from top-tier companies</p>
               </div>
             </div>
             
             <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-              The world's first EduTech × HrTech ecosystem that will build talent, accelerate careers, 
-              and revolutionize how companies hire.
+              The world's first global career accelerator combining AI matching, intensive 12-week training, 
+              and guaranteed job placement with FAANG and top startups.
             </p>
           </div>
 

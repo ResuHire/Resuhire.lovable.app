@@ -13,27 +13,27 @@ import { CheckCircle, Shield, Brain, Target, Zap } from 'lucide-react';
 const Home = () => {
   const uniqueValueProps = [
     {
-      icon: Shield,
-      title: "Only Platform with FAANG Internship Guarantees",
-      description: "Direct partnerships ensuring placement from year 1 of college",
+      icon: Brain,
+      title: "Hirexus AI Career Compass",
+      description: "Proprietary AI that matches you with the perfect career path through smart conversations",
       color: "from-blue-500 to-cyan-500"
     },
     {
-      icon: Brain,
-      title: "Complete Human Transformation",
-      description: "Technical + Soft + Mental + Physical presence coaching",
+      icon: Shield,
+      title: "12-Week Global Experience",
+      description: "Intensive in-person program across 3 countries with hackathons and real-world training",
       color: "from-purple-500 to-pink-500"
     },
     {
-      icon: Zap,
-      title: "AI-First Hiring Revolution",
-      description: "85% match accuracy vs traditional 15-20% resume success",
+      icon: Target,
+      title: "Big Tech Mentors",
+      description: "Coached by FAANG engineers, startup founders, and product managers building the future",
       color: "from-green-500 to-emerald-500"
     },
     {
-      icon: Target,
-      title: "End-to-End Ecosystem",
-      description: "From skill gap identification to job placement in one platform",
+      icon: Zap,
+      title: "Guaranteed Job Placement",
+      description: "Every graduate placed into paid internships or jobs with partner companies",
       color: "from-orange-500 to-red-500"
     }
   ];
@@ -50,14 +50,14 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700">
-              🔥 World's Most Comprehensive Platform
+              🌍 World's First Global Career Accelerator
             </Badge>
             <h2 className="text-4xl md:text-6xl font-bold mb-6">
-              Why ResuHire is <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Unprecedented</span>
+              Why ResuHire is <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Revolutionary</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              The world's first platform that seamlessly integrates HRTech + EdTech + AI with FAANG access, 
-              mental preparation, and holistic human development. No other platform offers this complete transformation.
+              The world's first 12-week global accelerator that combines AI career matching, intensive in-person training 
+              across 3 countries, FAANG mentorship, and guaranteed job placement. No other program offers this complete transformation.
             </p>
           </div>
 
@@ -81,7 +81,7 @@ const Home = () => {
                 <span className="text-lg font-semibold text-gray-800">The Complete Solution</span>
               </div>
               <p className="text-gray-700 text-lg">
-                While others focus on parts of the journey, ResuHire builds complete warriors from start to hire.
+                While others offer online courses or job boards, ResuHire delivers a complete global transformation in just 12 weeks.
               </p>
             </div>
           </div>
