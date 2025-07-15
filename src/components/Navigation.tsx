@@ -9,14 +9,12 @@ const Navigation = () => {
   const location = useLocation();
 
   const navItems = [
-    { href: '/', label: 'Home' },
-    { href: '/features', label: 'Features' },
-    { href: '/how-it-works', label: 'How It Works' },
-    { href: '/programs', label: 'Programs' },
-    { href: '/companies', label: 'Companies' },
-    { href: '/testimonials', label: 'Testimonials' },
-    { href: '/pricing', label: 'Pricing' },
-    { href: '/about', label: 'About' }
+    { href: '/about', label: 'About' },
+    { href: '/portfolio', label: 'Portfolio' },
+    { href: '/blog', label: 'Blog' },
+    { href: '/events', label: 'Events' },
+    { href: '/careers', label: 'Careers' },
+    { href: '/resources', label: 'Resources' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -25,12 +23,9 @@ const Navigation = () => {
     <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-200 z-50 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
-          {/* Logo */}
+          {/* Logo - clean and simple like Iterative */}
           <Link to="/" className="flex items-center">
-            <div className="w-8 h-8 bg-gradient-to-br from-orange-600 to-purple-600 rounded-lg flex items-center justify-center mr-3 shadow-md">
-              <span className="text-white font-bold text-sm">R</span>
-            </div>
-            <span className="text-2xl font-bold text-gray-900">ResuHire</span>
+            <span className="text-xl font-bold text-gray-900">resuhire</span>
           </Link>
 
           {/* Desktop Menu */}
@@ -40,22 +35,18 @@ const Navigation = () => {
                 <Link
                   key={item.href}
                   to={item.href}
-                  className={`font-medium transition-colors ${
-                    isActive(item.href)
-                      ? 'text-orange-600 border-b-2 border-orange-600 pb-1'
-                      : 'text-gray-700 hover:text-orange-600'
-                  }`}
+                  className="text-gray-600 hover:text-gray-900 font-normal transition-colors duration-200 text-sm"
                 >
                   {item.label}
                 </Link>
               ))}
             </div>
-            <div className="flex items-center space-x-3">
-              <Button variant="ghost" className="text-gray-700 hover:text-gray-900">
-                Investor Login
+            <div className="flex items-center space-x-4">
+              <Button variant="ghost" className="text-gray-600 hover:text-gray-900 text-sm">
+                Demo Day
               </Button>
-              <Button className="bg-gradient-to-r from-orange-600 to-purple-600 hover:from-orange-700 hover:to-purple-700 text-white shadow-md hover:shadow-lg transition-all duration-300">
-                Join Waitlist
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white text-sm px-6">
+                Apply for Summer 2025
               </Button>
             </div>
           </div>
@@ -88,11 +79,11 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="flex flex-col space-y-2 px-4 pt-4 border-t border-gray-200">
-                <Button variant="ghost" className="justify-start">
-                  Investor Login
+                <Button variant="ghost" className="justify-start text-gray-600 text-sm">
+                  Demo Day
                 </Button>
-                <Button className="bg-gradient-to-r from-orange-600 to-purple-600 hover:from-orange-700 hover:to-purple-700 text-white justify-start">
-                  Join Waitlist
+                <Button className="bg-blue-600 text-white justify-start text-sm">
+                  Apply for Summer 2025
                 </Button>
               </div>
             </div>

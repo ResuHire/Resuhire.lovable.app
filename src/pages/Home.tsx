@@ -7,6 +7,7 @@ import DualValue from '@/components/DualValue';
 import InvestorCTA from '@/components/InvestorCTA';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { CheckCircle, Shield, Brain, Target, Zap, Building, Users, Award } from 'lucide-react';
 
@@ -49,60 +50,60 @@ const Home = () => {
       <SocialProof />
       <TractionMetrics />
       
-      {/* Competitive Advantages Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
-        <div className="container mx-auto px-4">
+      {/* Simple value proposition section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6 max-w-4xl text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+            We invest US $150K to $500K each in a batch of students, twice a year
+          </h2>
+          <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
+            We invest the full amount upon admission. We then work with the students closely on their development for 3 months during the cohort. After 3 months, they present to a select group of employers with the goal of securing a FAANG position.
+          </p>
+          <div className="mt-8">
+            <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50">
+              About our program
+            </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Photo grid section - inspired by Iterative's scattered layout */}
+      <section className="py-20 bg-gray-50">
+        <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <Badge className="mb-4 bg-gradient-to-r from-green-100 to-blue-100 text-green-700 border-green-200">
-              💼 Investment Opportunity
-            </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Why ResuHire <span className="bg-gradient-to-r from-orange-600 to-purple-600 bg-clip-text text-transparent">Wins</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              We invest in the world-changing engineers of tomorrow
             </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              The world's first platform combining EdTech + HrTech with guaranteed outcomes. 
-              Addressing a $240B market with a defensible, scalable solution.
-            </p>
+            <Button variant="outline" className="border-gray-300 text-gray-700 hover:bg-gray-50">
+              See all our success stories
+            </Button>
           </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            {competitiveAdvantages.map((advantage, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group">
-                <div className="flex items-start gap-6">
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${advantage.color} flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300`}>
-                    <advantage.icon className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between mb-3">
-                      <h3 className="text-xl font-bold text-gray-900">{advantage.title}</h3>
-                      <span className="text-sm font-semibold text-orange-600 bg-orange-50 px-3 py-1 rounded-full">
-                        {advantage.metric}
-                      </span>
-                    </div>
-                    <p className="text-gray-600 leading-relaxed">{advantage.description}</p>
-                  </div>
-                </div>
+          
+          {/* Scattered photo layout */}
+          <div className="relative max-w-6xl mx-auto h-96">
+            <div className="absolute top-0 left-0 w-48 h-32 bg-gray-200 rounded-lg shadow-md transform rotate-3">
+              <div className="w-full h-full bg-gray-300 rounded-lg flex items-center justify-center text-gray-600">
+                Student Photo 1
               </div>
-            ))}
-          </div>
-
-          {/* Market Opportunity */}
-          <div className="text-center mt-16">
-            <div className="bg-gradient-to-r from-gray-900 to-black rounded-3xl p-12 max-w-4xl mx-auto text-white">
-              <h3 className="text-2xl font-bold mb-6">Massive Market Opportunity</h3>
-              <div className="grid md:grid-cols-3 gap-8">
-                <div>
-                  <div className="text-3xl font-bold text-orange-400 mb-2">$240B</div>
-                  <div className="text-gray-300">Global EdTech Market</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-purple-400 mb-2">$15B</div>
-                  <div className="text-gray-300">Recruiting Software TAM</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-green-400 mb-2">73M</div>
-                  <div className="text-gray-300">College Students Globally</div>
-                </div>
+            </div>
+            <div className="absolute top-16 right-32 w-40 h-28 bg-gray-200 rounded-lg shadow-md transform -rotate-2">
+              <div className="w-full h-full bg-gray-300 rounded-lg flex items-center justify-center text-gray-600">
+                Student Photo 2
+              </div>
+            </div>
+            <div className="absolute bottom-20 left-64 w-44 h-30 bg-gray-200 rounded-lg shadow-md transform rotate-1">
+              <div className="w-full h-full bg-gray-300 rounded-lg flex items-center justify-center text-gray-600">
+                Student Photo 3
+              </div>
+            </div>
+            <div className="absolute bottom-0 right-0 w-52 h-36 bg-gray-200 rounded-lg shadow-md transform -rotate-1">
+              <div className="w-full h-full bg-gray-300 rounded-lg flex items-center justify-center text-gray-600">
+                Student Photo 4
+              </div>
+            </div>
+            <div className="absolute top-32 left-1/2 transform -translate-x-1/2 w-36 h-24 bg-gray-200 rounded-lg shadow-md rotate-2">
+              <div className="w-full h-full bg-gray-300 rounded-lg flex items-center justify-center text-gray-600">
+                Student Photo 5
               </div>
             </div>
           </div>
