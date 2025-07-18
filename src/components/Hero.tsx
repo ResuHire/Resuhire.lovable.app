@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Users, Building, GraduationCap, Trophy, Briefcase, Target, CheckCircle, Star, TrendingUp } from 'lucide-react';
+import { ArrowRight, Users, Building, GraduationCap, Trophy, Briefcase, Target, CheckCircle, Star, TrendingUp, Brain } from 'lucide-react';
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 
 const Hero = () => {
@@ -10,169 +10,138 @@ const Hero = () => {
   const { elementRef: ecosystemRef, isVisible: ecosystemVisible } = useScrollAnimation();
 
   return (
-    <section className="pt-32 pb-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        {/* Clear Value Proposition - YC Feedback */}
-        <div 
-          ref={heroRef}
-          className={`text-center mb-16 transition-all duration-1000 ${
-            heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
-        >
-          <div className="inline-flex items-center gap-3 bg-orange-50 border border-orange-200 rounded-full px-6 py-3 mb-8 hover:bg-orange-100 transition-colors duration-300 cursor-pointer">
-            <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
-            <span className="text-orange-700 font-semibold text-sm tracking-wide">THE COMPLETE ECOSYSTEM</span>
-          </div>
+    <section className="pt-24 pb-20 bg-white">
+      <div className="max-w-4xl mx-auto px-6 text-center">
+        
+        {/* Main Heading */}
+        <div className="mb-16">
+          <p className="text-primary text-lg font-semibold mb-4 tracking-wide uppercase">
+            12 WEEKS. $500K PRE-SEED.
+          </p>
           
-          <h1 className="text-6xl md:text-8xl font-bold mb-4 text-gray-900 tracking-tight hover:scale-105 transition-transform duration-500 cursor-default">
-            ResuHire
+          <h1 className="text-5xl md:text-7xl font-black text-black mb-8 leading-tight tracking-tight">
+            Your Fast-Track<br />
+            Into <span className="text-primary">Career Success</span>.
           </h1>
           
-          {/* Enhanced Taglines - User Feedback */}
-          <p className="text-2xl md:text-3xl font-light text-gray-600 mb-2 tracking-wide">
-            AI-Powered Global Career Accelerator
-          </p>
-          <p className="text-lg md:text-xl font-light text-gray-500 mb-6 tracking-wide">
-            Land a job or paid internship within 3 weeks of graduation — all in just 12 immersive weeks across 3 countries
+          <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
+            A 12-week immersive experience bringing you together with FAANG mentors, 
+            global training across 3 countries, and guaranteed job placement.
           </p>
           
-          {/* Y Combinator Comparison */}
-          <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-xl p-6 mb-8 max-w-2xl mx-auto border border-purple-200 hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer">
-            <p className="text-xl md:text-2xl font-semibold text-gray-800">
-              Startups have <span className="text-orange-600 font-bold">Y Combinator</span>.
-            </p>
-            <p className="text-xl md:text-2xl font-semibold text-gray-800 mt-2">
-              Job seekers will have <span className="text-purple-600 font-bold">ResuHire</span>.
-            </p>
-          </div>
+          <Button className="bg-primary hover:bg-primary/90 text-white font-semibold px-8 py-4 text-lg rounded-full mb-16">
+            Apply Now
+          </Button>
+        </div>
+
+        {/* Photo Grid - ZFellows Style */}
+        <div className="grid grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2 mb-20">
+          {[
+            'photo-1486312338219-ce68d2c6f44d',
+            'photo-1518770660439-4636190af475', 
+            'photo-1581091226825-a6a2a5aee158',
+            'photo-1531297484001-80022131f5a1',
+            'photo-1498050108023-c5249f4df085',
+            'photo-1488590528505-98d2b5aba04b',
+            'photo-1486312338219-ce68d2c6f44d',
+            'photo-1518770660439-4636190af475',
+            'photo-1581091226825-a6a2a5aee158',
+            'photo-1531297484001-80022131f5a1',
+            'photo-1498050108023-c5249f4df085',
+            'photo-1488590528505-98d2b5aba04b',
+            'photo-1486312338219-ce68d2c6f44d',
+            'photo-1518770660439-4636190af475',
+            'photo-1581091226825-a6a2a5aee158',
+            'photo-1531297484001-80022131f5a1',
+          ].map((photo, index) => (
+            <div key={index} className="aspect-square bg-gray-200 rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+              <img 
+                src={`https://images.unsplash.com/${photo}?w=400&h=400&fit=crop&auto=format`}
+                alt={`Career accelerator participant ${index + 1}`}
+                className="w-full h-full object-cover filter grayscale hover:grayscale-0 transition-all duration-300"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Success Pattern Section */}
+        <div className="mb-20">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-6">
+            There's a pattern among the most successful careers.
+          </h2>
+          <p className="text-xl text-gray-700 mb-8 leading-relaxed max-w-2xl mx-auto">
+            They all started by learning from those who have built multi-billion dollar companies.
+          </p>
+          <p className="text-xl text-gray-700 mb-8 leading-relaxed max-w-2xl mx-auto">
+            Getting mentored by proven industry leaders is the fastest way to accelerate.
+          </p>
+          <p className="text-2xl font-bold text-black">
+            Success leaves clues—follow them.
+          </p>
+        </div>
+
+        {/* How ResuHire Works */}
+        <div className="mb-20">
+          <h2 className="text-3xl md:text-4xl font-bold text-black mb-12">
+            <span className="text-primary">ResuHire</span> connects really early builders with multi-billion dollar mentors.
+          </h2>
           
-          {/* Clear Value Props - YC Feedback */}
-          <div className="max-w-4xl mx-auto mb-12">
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-blue-50 rounded-lg p-4 hover:bg-blue-100 hover:scale-105 transition-all duration-300 cursor-pointer">
-                <CheckCircle className="w-6 h-6 text-blue-600 mx-auto mb-2" />
-                <h3 className="font-bold text-blue-800 mb-1">AI Career Matching</h3>
-                <p className="text-sm text-blue-600">Hirexus AI finds your perfect career path through smart conversations</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div className="text-left">
+              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                <Brain className="w-6 h-6 text-white" />
               </div>
-              <div className="bg-purple-50 rounded-lg p-4 hover:bg-purple-100 hover:scale-105 transition-all duration-300 cursor-pointer">
-                <Trophy className="w-6 h-6 text-purple-600 mx-auto mb-2" />
-                <h3 className="font-bold text-purple-800 mb-1">Global 12-Week Program</h3>
-                <p className="text-sm text-purple-600">Intensive hands-on training across 3 countries with 120-200 cohorts</p>
-              </div>
-              <div className="bg-green-50 rounded-lg p-4 hover:bg-green-100 hover:scale-105 transition-all duration-300 cursor-pointer">
-                <Target className="w-6 h-6 text-green-600 mx-auto mb-2" />
-                <h3 className="font-bold text-green-800 mb-1">FAANG Mentors</h3>
-                <p className="text-sm text-green-600">Coached by actual engineers, founders, and PMs from top-tier companies</p>
-              </div>
+              <h3 className="text-lg font-bold text-black mb-2">AI Career Matching</h3>
+              <p className="text-gray-600">Hirexus AI chats with you to find your perfect career path instantly</p>
             </div>
             
-            <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-              A full-stack career catalyst that combines proprietary AI, hands-on immersive training across 3 countries, 
-              mentorship from FAANG leaders, and guaranteed placement in paid roles within 3 weeks.
-            </p>
-          </div>
-
-          {/* Enhanced Traction Metrics - YC Feedback */}
-          <div 
-            ref={metricsRef}
-            className={`grid grid-cols-2 md:grid-cols-4 gap-8 mb-12 max-w-5xl mx-auto transition-all duration-1000 delay-300 ${
-              metricsVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}
-          >
-            <div className="text-center hover:scale-110 transition-transform duration-300 cursor-pointer">
-              <div className="flex items-center justify-center mb-2">
-                <div className="text-4xl md:text-5xl font-bold text-gray-900">1,000+</div>
-                <TrendingUp className="w-5 h-5 text-green-500 ml-2" />
+            <div className="text-left">
+              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                <GraduationCap className="w-6 h-6 text-white" />
               </div>
-              <div className="text-gray-600 font-medium">Waitlist Applicants</div>
-              <div className="text-xs text-green-600 font-semibold">Pre-product traction</div>
+              <h3 className="text-lg font-bold text-black mb-2">Global Training</h3>
+              <p className="text-gray-600">12-week intensive program across 3 countries with real-world experience</p>
             </div>
-            <div className="text-center hover:scale-110 transition-transform duration-300 cursor-pointer">
-              <div className="flex items-center justify-center mb-2">
-                <div className="text-4xl md:text-5xl font-bold text-gray-900">20+</div>
-                <Building className="w-5 h-5 text-blue-500 ml-2" />
+            
+            <div className="text-left">
+              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                <Users className="w-6 h-6 text-white" />
               </div>
-              <div className="text-gray-600 font-medium">Hiring Partners</div>
-              <div className="text-xs text-blue-600 font-semibold">Ready to onboard talent</div>
+              <h3 className="text-lg font-bold text-black mb-2">FAANG Mentors</h3>
+              <p className="text-gray-600">Learn directly from engineers and founders at top-tier companies</p>
             </div>
-            <div className="text-center hover:scale-110 transition-transform duration-300 cursor-pointer">
-              <div className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">$200B+</div>
-              <div className="text-gray-600 font-medium">Market Opportunity</div>
-              <div className="text-xs text-purple-600 font-semibold">Global hiring & education</div>
+            
+            <div className="text-left">
+              <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center mb-4">
+                <Target className="w-6 h-6 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-black mb-2">Guaranteed Placement</h3>
+              <p className="text-gray-600">Land a paid job or internship within 3 weeks of graduation</p>
             </div>
-            <div className="text-center hover:scale-110 transition-transform duration-300 cursor-pointer">
-              <div className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">90%+</div>
-              <div className="text-gray-600 font-medium">Target Placement Rate</div>
-              <div className="text-xs text-orange-600 font-semibold">Within 3 weeks</div>
-            </div>
-          </div>
-
-          {/* Enhanced Social Proof - YC Feedback */}
-          <div className="bg-gray-50 rounded-2xl p-6 mb-8 max-w-4xl mx-auto hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              {[...Array(5)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 text-yellow-500 fill-current hover:scale-125 transition-transform duration-200" />
-              ))}
-              <span className="font-bold text-gray-800 ml-2">4.9/5</span>
-              <span className="text-gray-600">projected from beta users</span>
-            </div>
-            <p className="text-gray-700 italic">
-              "ResuHire addresses a massive underserved market with an AI-native, cohort-driven solution. 
-              The traditional education-to-employment pipeline is outdated and failing millions."
-            </p>
-            <p className="text-sm text-gray-600 mt-2">- Industry Analysis</p>
-          </div>
-
-          {/* Primary Actions with Clear UX - YC Feedback */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center mb-20">
-            <Button size="lg" className="bg-black hover:bg-gray-800 text-white px-12 py-4 text-lg font-semibold h-14 hover:scale-105 transition-all duration-300 hover:shadow-xl">
-              Join the Revolution
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button size="lg" variant="outline" className="border-2 border-gray-300 text-gray-700 hover:bg-gray-50 px-12 py-4 text-lg font-semibold h-14 hover:scale-105 transition-all duration-300 hover:shadow-lg">
-              See Our Vision
-            </Button>
           </div>
         </div>
 
-        {/* Ecosystem Overview */}
-        <div 
-          ref={ecosystemRef}
-          className={`grid md:grid-cols-3 gap-12 max-w-6xl mx-auto transition-all duration-1000 delay-600 ${
-            ecosystemVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
-        >
-          <div className="text-center hover:scale-105 transition-all duration-300 cursor-pointer group">
-            <div className="w-16 h-16 bg-blue-50 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-100 group-hover:shadow-lg transition-all duration-300">
-              <GraduationCap className="w-8 h-8 text-blue-600 group-hover:scale-110 transition-transform duration-300" />
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">EduTech Platform</h3>
-            <p className="text-gray-600 leading-relaxed">
-              Comprehensive learning infrastructure with personalized curriculum, 
-              expert mentorship, and skill certification programs.
-            </p>
+        {/* Traction Metrics */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+          <div>
+            <div className="text-3xl md:text-4xl font-black text-black">1,000+</div>
+            <div className="text-gray-600 font-medium">Waitlist Applicants</div>
           </div>
-          <div className="text-center hover:scale-105 transition-all duration-300 cursor-pointer group">
-            <div className="w-16 h-16 bg-green-50 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-green-100 group-hover:shadow-lg transition-all duration-300">
-              <Briefcase className="w-8 h-8 text-green-600 group-hover:scale-110 transition-transform duration-300" />
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">HrTech Engine</h3>
-            <p className="text-gray-600 leading-relaxed">
-              AI-powered talent matching, streamlined recruitment processes, 
-              and data-driven hiring solutions for enterprise partners.
-            </p>
+          <div>
+            <div className="text-3xl md:text-4xl font-black text-black">20+</div>
+            <div className="text-gray-600 font-medium">Hiring Partners</div>
           </div>
-          <div className="text-center hover:scale-105 transition-all duration-300 cursor-pointer group">
-            <div className="w-16 h-16 bg-purple-50 rounded-xl flex items-center justify-center mx-auto mb-6 group-hover:bg-purple-100 group-hover:shadow-lg transition-all duration-300">
-              <Trophy className="w-8 h-8 text-purple-600 group-hover:scale-110 transition-transform duration-300" />
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Career Accelerator</h3>
-            <p className="text-gray-600 leading-relaxed">
-              End-to-end career transformation with guaranteed outcomes, 
-              lifetime alumni network, and continuous growth support.
-            </p>
+          <div>
+            <div className="text-3xl md:text-4xl font-black text-black">$200B+</div>
+            <div className="text-gray-600 font-medium">Market Opportunity</div>
+          </div>
+          <div>
+            <div className="text-3xl md:text-4xl font-black text-black">90%+</div>
+            <div className="text-gray-600 font-medium">Target Placement Rate</div>
           </div>
         </div>
+
       </div>
     </section>
   );

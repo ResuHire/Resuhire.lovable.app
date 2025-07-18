@@ -45,40 +45,38 @@ const Home = () => {
       <SocialProof />
       <Stats />
       
-      {/* Why ResuHire is Unprecedented Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700">
-              💰 Raising $500K Pre-Seed
-            </Badge>
-            <h2 className="text-4xl md:text-6xl font-bold mb-6">
-              The Problem We're <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Solving</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Over 60% of college graduates feel unprepared for the workforce, companies waste billions annually on sourcing talent, 
-              and bootcamps fail to deliver guaranteed outcomes. Job boards flood the market with noise but don't solve the real problem.
-            </p>
-          </div>
+      {/* Problem Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <p className="text-primary text-lg font-semibold mb-4 tracking-wide uppercase">
+            💰 Raising $500K Pre-Seed
+          </p>
+          <h2 className="text-4xl md:text-5xl font-black text-black mb-8">
+            The Problem We're <span className="text-primary">Solving</span>
+          </h2>
+          <p className="text-xl text-gray-700 leading-relaxed mb-12">
+            Over 60% of college graduates feel unprepared for the workforce, companies waste billions annually on sourcing talent, 
+            and bootcamps fail to deliver guaranteed outcomes. Job boards flood the market with noise but don't solve the real problem.
+          </p>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8">
             {uniqueValueProps.map((prop, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${prop.color} flex items-center justify-center mb-6`}>
-                  <prop.icon className="w-8 h-8 text-white" />
+              <div key={index} className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-100">
+                <div className={`w-12 h-12 rounded-lg bg-primary flex items-center justify-center mb-6`}>
+                  <prop.icon className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-gray-900">{prop.title}</h3>
+                <h3 className="text-xl font-bold mb-4 text-black">{prop.title}</h3>
                 <p className="text-gray-600 leading-relaxed">{prop.description}</p>
               </div>
             ))}
           </div>
 
           {/* Additional emphasis */}
-          <div className="text-center mt-12">
-            <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-8 max-w-4xl mx-auto border border-purple-200">
+          <div className="mt-12">
+            <div className="bg-white rounded-2xl p-8 max-w-3xl mx-auto border border-gray-200">
               <div className="flex items-center justify-center gap-2 mb-4">
-                <CheckCircle className="w-6 h-6 text-green-600" />
-                <span className="text-lg font-semibold text-gray-800">The Complete Solution</span>
+                <CheckCircle className="w-6 h-6 text-primary" />
+                <span className="text-lg font-bold text-black">The Complete Solution</span>
               </div>
               <p className="text-gray-700 text-lg">
                 A full-stack career catalyst operating on a hybrid B2B2C model - candidates pay $5/week, companies pay for vetted talent access.
