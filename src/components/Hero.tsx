@@ -30,10 +30,10 @@ const Hero = () => {
           
           {/* Enhanced Taglines - User Feedback */}
           <p className="text-2xl md:text-3xl font-light text-gray-600 mb-2 tracking-wide">
-            Career Catalyst in 12 Weeks
+            AI-Powered Global Career Accelerator
           </p>
           <p className="text-lg md:text-xl font-light text-gray-500 mb-6 tracking-wide">
-            Global accelerator program guaranteeing job placement within 3 weeks after graduation
+            Land a job or paid internship within 3 weeks of graduation — all in just 12 immersive weeks across 3 countries
           </p>
           
           {/* Y Combinator Comparison */}
@@ -67,8 +67,8 @@ const Hero = () => {
             </div>
             
             <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-              The world's first global career accelerator combining AI matching, intensive 12-week training, 
-              and guaranteed job placement with FAANG and top startups.
+              A full-stack career catalyst that combines proprietary AI, hands-on immersive training across 3 countries, 
+              mentorship from FAANG leaders, and guaranteed placement in paid roles within 3 weeks.
             </p>
           </div>
 
@@ -81,29 +81,29 @@ const Hero = () => {
           >
             <div className="text-center hover:scale-110 transition-transform duration-300 cursor-pointer">
               <div className="flex items-center justify-center mb-2">
-                <div className="text-4xl md:text-5xl font-bold text-gray-900">25K+</div>
+                <div className="text-4xl md:text-5xl font-bold text-gray-900">1,000+</div>
                 <TrendingUp className="w-5 h-5 text-green-500 ml-2" />
               </div>
-              <div className="text-gray-600 font-medium">Active Warriors in Sights</div>
-              <div className="text-xs text-green-600 font-semibold">Securing +300% growth</div>
+              <div className="text-gray-600 font-medium">Waitlist Applicants</div>
+              <div className="text-xs text-green-600 font-semibold">Pre-product traction</div>
             </div>
             <div className="text-center hover:scale-110 transition-transform duration-300 cursor-pointer">
               <div className="flex items-center justify-center mb-2">
-                <div className="text-4xl md:text-5xl font-bold text-gray-900">500+</div>
+                <div className="text-4xl md:text-5xl font-bold text-gray-900">20+</div>
                 <Building className="w-5 h-5 text-blue-500 ml-2" />
               </div>
-              <div className="text-gray-600 font-medium">Future Partners</div>
-              <div className="text-xs text-blue-600 font-semibold">Including FAANG</div>
+              <div className="text-gray-600 font-medium">Hiring Partners</div>
+              <div className="text-xs text-blue-600 font-semibold">Ready to onboard talent</div>
             </div>
             <div className="text-center hover:scale-110 transition-transform duration-300 cursor-pointer">
-              <div className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">$180K</div>
-              <div className="text-gray-600 font-medium">Target Avg. Salary</div>
-              <div className="text-xs text-purple-600 font-semibold">85% above market</div>
+              <div className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">$200B+</div>
+              <div className="text-gray-600 font-medium">Market Opportunity</div>
+              <div className="text-xs text-purple-600 font-semibold">Global hiring & education</div>
             </div>
             <div className="text-center hover:scale-110 transition-transform duration-300 cursor-pointer">
-              <div className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">98%</div>
+              <div className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">90%+</div>
               <div className="text-gray-600 font-medium">Target Placement Rate</div>
-              <div className="text-xs text-orange-600 font-semibold">Within 6 months</div>
+              <div className="text-xs text-orange-600 font-semibold">Within 3 weeks</div>
             </div>
           </div>
 
@@ -117,10 +117,10 @@ const Hero = () => {
               <span className="text-gray-600">projected from beta users</span>
             </div>
             <p className="text-gray-700 italic">
-              "ResuHire will revolutionize how we think about career preparation. The transformation approach is incredible - 
-              not just technically but mentally and professionally."
+              "ResuHire addresses a massive underserved market with an AI-native, cohort-driven solution. 
+              The traditional education-to-employment pipeline is outdated and failing millions."
             </p>
-            <p className="text-sm text-gray-600 mt-2">- Early Beta Tester</p>
+            <p className="text-sm text-gray-600 mt-2">- Industry Analysis</p>
           </div>
 
           {/* Primary Actions with Clear UX - YC Feedback */}
