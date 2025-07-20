@@ -64,19 +64,16 @@ const About = () => {
       <Navigation />
       <div className="pt-16">
         {/* Hero Section */}
-        <div className="py-20 bg-gradient-to-b from-gray-50 to-white">
-          <div className="container mx-auto px-4 text-center">
-            <Badge className="mb-4 bg-gradient-to-r from-purple-100 to-blue-100 text-purple-700">
-              🚀 About ResuHire
-            </Badge>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              The World's First <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Career Operating System</span>
+        <div className="py-32 bg-white">
+          <div className="container mx-auto px-4 text-center max-w-4xl">
+            <h1 className="text-5xl md:text-7xl font-bold mb-8 text-black leading-tight">
+              The World's First <span className="text-blue-600">Career Operating System</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-12 leading-relaxed">
               ResuHire is not just another hiring platform. It's a category-creating, B2B2C career operating system built at the intersection of HRTech, EdTech, and Advanced AI.
             </p>
-            <div className="bg-gradient-to-r from-orange-100 to-red-100 rounded-2xl p-6 max-w-2xl mx-auto border border-orange-200">
-              <p className="text-lg font-semibold text-gray-800">
+            <div className="bg-gray-50 rounded-2xl p-8 max-w-2xl mx-auto">
+              <p className="text-xl font-medium text-black">
                 "YC builds the next generation of startups.<br />
                 ResuHire builds the next generation of startup talent."
               </p>

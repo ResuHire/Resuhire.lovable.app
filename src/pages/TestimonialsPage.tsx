@@ -14,15 +14,15 @@ const TestimonialsPage = () => {
       <div className="pt-16">
         <div 
           ref={heroRef}
-          className={`py-20 bg-gradient-to-b from-gray-50 to-white transition-all duration-1000 ${
+          className={`py-32 bg-white transition-all duration-1000 ${
             heroVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 hover:scale-105 transition-transform duration-500 cursor-default">
-              Success <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Stories</span>
+          <div className="container mx-auto px-4 text-center max-w-4xl">
+            <h1 className="text-5xl md:text-7xl font-bold mb-8 text-black leading-tight hover:scale-105 transition-transform duration-500 cursor-default">
+              Success <span className="text-blue-600">Stories</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Hear from our community of successful job seekers and companies who found their perfect match.
             </p>
           </div>

@@ -11,12 +11,12 @@ const Companies = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       <div className="pt-16">
-        <div className="py-20 bg-gradient-to-b from-gray-50 to-white">
-          <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Partner <span className="bg-gradient-to-r from-purple-600 to-blue-600 bg-clip-text text-transparent">Companies</span>
+        <div className="py-32 bg-white">
+          <div className="container mx-auto px-4 text-center max-w-4xl">
+            <h1 className="text-5xl md:text-7xl font-bold mb-8 text-black leading-tight">
+              Partner <span className="text-blue-600">Companies</span>
             </h1>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Discover the amazing companies that trust ResuHire to find their next great hires.
             </p>
           </div>
